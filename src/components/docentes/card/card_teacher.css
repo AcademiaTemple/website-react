@@ -1,0 +1,119 @@
+.card {
+  margin-bottom: 3rem;
+}
+
+.avatar-card-teacher {
+  width: 13rem;
+  height: 13rem;
+}
+
+.card-teacher {
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+  .card-teacher {
+    background: #FFFFFF;
+    border: 1px solid rgba(117, 117, 117, 0.6);
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+  }
+}
+
+.card-teacher h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card-teacher h2 {
+    text-align: left;
+  }  
+}
+
+.card-teacher p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-teacher .contenedor-img {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.rounded {
+  border-radius: 2rem !important;
+  margin-bottom: 2%;
+}
+
+.center {
+  text-align: left;
+}
+
+.rounded-circle {
+  /*border: 1px solid #071727 !important;*/
+}
+
+.likes {
+  margin: auto;
+  text-align: center;
+}
+
+.likes>h6 {
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-weight: 1000 !important;
+  font-size: 9rem;
+}
+
+.likes>i {
+  font-size: 4rem;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.redes-docentes>.red-social {
+  display: inline;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.redes-docentes>.red-usuario {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(35, 156, 244);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.redes-docentes>i {
+  margin-right: .5rem;
+  font-size: 1.5rem;
+}
+
+.link {
+  display: block;
+}
+
+.etiquetas-card-teacher {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .etiquetas-card-teacher {
+    justify-content: flex-start;
+  }
+}
