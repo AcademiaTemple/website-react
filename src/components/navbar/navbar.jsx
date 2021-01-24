@@ -75,6 +75,9 @@ const Navbar = ({ usarTransparencia, currentPage }) => {
                     <li className="nav-item">
                       <Link to="/teachers">Docentes</Link>
                     </li>
+                    <li className="nav-item">
+                      <Link to="/login">Login</Link>
+                    </li>
                   </>
               }
             </ul>
