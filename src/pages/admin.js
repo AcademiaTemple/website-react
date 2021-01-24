@@ -1,21 +1,22 @@
 import React, { useState } from "react"
-import { Redirect } from 'react-router-dom';
-import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage'
 import Pestanas from '../components/pestanas'
 import TablaDocentes from '../components/tabla/docentes'
 import TablaCursos from '../components/tabla/cursos'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import {useHistory} from 'react-router-dom'
+import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage'
 
 export default function Admin({ location }) {
 
+    let history = useHistory();
     const [usuario] = useState(obtUsuarioStorage());
 
     // Índice
     const [indPestanaActiva, estIndPestanaActiva] = useState(0);
 
     if (!usuario) {
-        return <Redirect to={'login'} />
+        history.push('login');        
     }
 
     return (
