@@ -1,29 +1,37 @@
 import React from "react"
 import { Link } from 'react-router-dom'
 import logoAngular from "../../img/angular.png"
-import logoReact from "../../img/react.png"
-import logoGit from "../../img/git.png"
+import logoJava from "../../img/java.png"
+import logoCSharp from "../../img/csharp.png"
+import logoFlutter from "../../img/flutter.png"
 import "./nuestroscursos.css"
 
 const cursos = [
   {
-    id: "1",
+    id: "IrnTmomFcr5EGtcMVFGd",
     fondo: "linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%)",
     nombre: "Angular",
     icono: logoAngular,
   },
   {
-    id: "2",
-    fondo: "linear-gradient(232.22deg, #048EF2 26.28%, #40FFFF 127.09%)",
-    nombre: "React",
-    icono: logoReact,
+    id: "RMncpHvuu5rVYFEU6nyE",
+    fondo: "linear-gradient(232.22deg, #F23D04 26.28%, #FFD540 127.09%)",
+    nombre: "Java",
+    icono: logoJava,
   },
   {
-    id: "3",
-    fondo: "linear-gradient(232.22deg, #F23D04 26.28%, #FFD540 127.09%)",
-    nombre: "Git",
-    icono: logoGit,
+    id: "YfzTQFJAonwTWDv62MQu",
+    fondo: "linear-gradient(232.22deg, rgba(103,27,122,1) 26.28%, rgba(204,170,212,1) 127.09%)",
+    nombre: "C#",
+    icono: logoCSharp,
   },
+  {
+    id: "6Hu8PMszA9mub0MNG0Ec",
+    fondo: "linear-gradient(232.22deg, #048EF2 26.28%, #40FFFF 127.09%)",
+    nombre: "Flutter",
+    icono: logoFlutter,
+  },
+
 ]
 
 export default function Header() {

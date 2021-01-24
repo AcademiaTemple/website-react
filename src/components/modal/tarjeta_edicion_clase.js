@@ -113,11 +113,11 @@ const TarjetaEdicion = ({ nueva, clase, idCurso, correlativo, agregar, actualiza
             <legend class="col-form-label mb-4">{nueva ? 'Nueva clase' : 'Clase N° ' + orden}</legend>
             <div class="form-row">
                 <div className="form-group col-3">
-                    <label htmlFor="txtOrden">Orden</label>
+                    <label htmlFor="txtOrden">Orden*</label>
                     <input min="1" type="number" value={orden} onChange={actOrden} className="form-control form-control-lg" id="txtOrden" placeholder="Ingresa el número de orden" />
                 </div>
                 <div className="form-group col-9">
-                    <label htmlFor="txtTitulo">Título</label>
+                    <label htmlFor="txtTitulo">Título*</label>
                     <input type="text" value={titulo} onChange={actTitulo} className="form-control form-control-lg" id="txtTitulo" placeholder="Ingresa el título" />
                 </div>
             </div>
@@ -126,11 +126,11 @@ const TarjetaEdicion = ({ nueva, clase, idCurso, correlativo, agregar, actualiza
                 <textarea value={descripcion} onChange={actDescripcion} className="form-control" id="txtDescripcion" rows="3"></textarea>
             </div>
             <div className="form-group">
-                <label htmlFor="txtDuracion">Duración (Xh Ym)</label>
+                <label htmlFor="txtDuracion">Duración (Xh Ym)*</label>
                 <input type="text" value={duracion} onChange={actDuracion} className="form-control form-control-lg" id="txtDuracion" placeholder="Ejemplo: 1h 50m" />
             </div>
             <div className="form-group">
-                <label htmlFor="txtLink">Id video Youtube</label>
+                <label htmlFor="txtLink">Id video Youtube*</label>
                 <input type="text" value={link} onChange={actLink} className="form-control form-control-lg" id="txtLink" placeholder="Ejemplo: KxWQCsE_GTo" />
             </div>
             <div className="form-group">

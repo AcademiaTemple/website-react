@@ -68,10 +68,10 @@ export default function Course(props) {
                     <Fade bottom>
                         <h2 className="titulo-seccion mt-5 mb-5 text-left titulo-curso">{curso.titulo}</h2>
                         <div className="contenedor-controles-curso">
-                            <Link target="_blank" className="boton btn-principal btn-rep-curso d-block" to={curso.urlInscripcion}>
+                            <a target="_blank" className="boton btn-principal btn-rep-curso d-block" href={curso.urlInscripcion}>
                                 <i className="fas fa-edit mr-3"></i>
                                     Inscribirme
-                                </Link>
+                                </a>
                             <div className="contenedor-data-cursos">
                                 <div className="mr-md-5">
                                     <i className="fas fa-layer-group"></i>{' '}

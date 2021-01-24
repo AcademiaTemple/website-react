@@ -14,17 +14,16 @@ export default function Estadisticas() {
         <div className="descripcion">
           <h2 className="fw-600">Conocimiento sin fronteras</h2>
           <p>
-            Somos la academia Temple, la primera gran escuela de programación en
-            vivo formada por alumnos y profesores voluntarios de la comunidad
-            informática
+            Somos la academia Temple, la primera escuela de programación donde expertos y aprendices de todas
+            partes del mundo crean y reciben clases hechas por ellos mismos.
           </p>
           <p>
-            ¡Incríbete a los cursos y talleres de tu interés, y entra a los
-            grupos de enseñanza! ¡Por ahora es gratis!
+            Inscríbete a nuestros cursos y talleres, el único requisito son tus deseos de aprender.
+            Si quieres dictar en la comunidad, escríbenos.
           </p>
           <div className="iconos">
             <div className="icono">
-              <p className="numero-estadistica">5000+</p>
+              <p className="numero-estadistica">+ 5.4k</p>
               <div className="contenedor-img">
                 <div className="imagen-estadistica">
                   <img src={logoUsuario} alt="logo-alumnos" />
@@ -33,7 +32,7 @@ export default function Estadisticas() {
               <p className="texto-estadistica">Miembros</p>
             </div>
             <div className="icono">
-              <p className="numero-estadistica">22</p>
+              <p className="numero-estadistica">+ 20</p>
               <div className="contenedor-img">
                 <div className="imagen-estadistica">
                   <img src={logoLentes} alt="logo-alumnos" />
@@ -42,13 +41,13 @@ export default function Estadisticas() {
               <p className="texto-estadistica">Docentes</p>
             </div>
             <div className="icono">
-              <p className="numero-estadistica">27</p>
+              <p className="numero-estadistica">+ 30</p>
               <div className="contenedor-img">
                 <div className="imagen-estadistica">
                   <img src={logoLibros} alt="logo-curso" />
                 </div>
               </div>
-              <p className="texto-estadistica">Cursos</p>
+              <p className="texto-estadistica">Cursos y talleres</p>
             </div>
           </div>
         </div>
@@ -59,10 +58,8 @@ export default function Estadisticas() {
               <h2 className="fw-700 m-0 ml-4">Misión</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              blanditiis accusamus illum dolores nobis expedita dicta dolor
-              dolore repellendus praesentium velit corporis voluptatum ipsam
-              inventore.
+              Buscamos usar la tecnología para facilitar el intercambio de conocimientos y fomentar un ambiente
+              colaborativo donde todos pongan de su parte para lograr el aprendizaje.
             </p>
           </div>
 
@@ -72,9 +69,8 @@ export default function Estadisticas() {
               <h2 className="fw-700 m-0 ml-4">Visión</h2>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              distinctio modi itaque nihil doloribus officiis commodi provident
-              harum nobis eaque, ratione consequuntur.
+              Queremos ser la comunidad de facto en la que todos los apasionados de la programación
+              piensen cuando tengan ganas de compartir sus conocimientos, aportar ideas o aprender algo nuevo.
             </p>
           </div>
         </div>

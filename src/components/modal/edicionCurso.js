@@ -168,7 +168,7 @@ const Edicion = (props) => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="txtObjetivo">Objetivo*</label>
-                        <input type="text" value={objetivo} onChange={actObjetivos} className="form-control form-control-lg" id="txtObjetivo" placeholder="Objetivo 1, objetivo 2" />
+                        <input type="text" value={objetivo} onChange={actObjetivos} className="form-control form-control-lg" id="txtObjetivo" placeholder="Ingresa solo un objetivo" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="txtDescBreve">Descripción breve*</label>
@@ -192,7 +192,7 @@ const Edicion = (props) => {
                         <input type="text" value={fInicioFin} onChange={actFinicioFin} className="form-control form-control-lg" id="txtFInicioFin" placeholder="dd/mm/yyyy, dd/mm/yyyy" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="txtHInicioFin">Hora inicio y fin*</label>
+                        <label htmlFor="txtHInicioFin">Hora inicio y fin (Formato 24h)*</label>
                         <input type="text" value={hInicioFin} onChange={actHInicioFin} className="form-control form-control-lg" id="txtHInicioFin" placeholder="hh:mm, hh:mm" />
                     </div>
                     <div className="form-group">

@@ -3,11 +3,11 @@ import AvatarTestimonio from "../../img/person.svg"
 export const testimonios = [
   {
     id: 1,
-    nombre: "Yayo Gonzales",
-    cargo: "Alumno de inglés",
+    nombre: "Pedro Gonzales",
+    cargo: "Alumno de Angular",
     avatar: AvatarTestimonio,
     contenido:
-      "Me enseñaron a hablar inglés desde conocimiento cero. Muchas gracias Academia Temple!",
+      "Academia Temple, el mejor lugar donde se aprende a programar los lenguajes mas demandados laboralmente. Actualmente con profesores altamente calificados y con una gran pedadogia para la enseñanza.",
     numEstrellas: 4,
   },
   {
