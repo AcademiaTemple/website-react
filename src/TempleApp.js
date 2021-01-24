@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Inicio from './pages/inicio';
 import Teachers from './pages/teachers';
 import TeacherDetail from './pages/teacher_detail';
@@ -9,14 +9,11 @@ import CoursePlayer from './pages/course-player';
 import Contact from './pages/contact';
 import Admin from './pages/admin';
 import About from './pages/about';
-import { AuthProvider } from './context/AuthContext';
 import { PrivateRoute } from './components/customRouter/privateRoute';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 const TempleApp = () => {
-
     return (
-
         <Router>
             <Switch>
                 <Route exact path="/" component={Inicio} />
