@@ -6,7 +6,7 @@ Bienvenido a la academia Temple, el primer espacio en internet donde el aprendiz
 
 ## ¡Mira la página en vivo!
 
-https://academiatemple.netlify.app/
+https://acadtemple.netlify.app/
 
 ## Diseño de la página
 
