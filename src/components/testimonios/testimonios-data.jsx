@@ -3,29 +3,29 @@ import AvatarTestimonio from "../../img/person.svg"
 export const testimonios = [
   {
     id: 1,
-    nombre: "Pedro Gonzales",
+    nombre: "Pedro Morales",
     cargo: "Alumno de Angular",
-    avatar: AvatarTestimonio,
+    avatar: 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/testimonios%2Ftestimonio1.jpg?alt=media&token=edb97f1d-cb43-4427-b0c8-a2e85f8676e8',
     contenido:
       "Academia Temple, el mejor lugar donde se aprende a programar los lenguajes mas demandados laboralmente. Actualmente con profesores altamente calificados y con una gran pedadogia para la enseñanza.",
-    numEstrellas: 4,
+    numEstrellas: 5
   },
   {
     id: 2,
-    nombre: "Alyoh Mascarita",
-    cargo: "Alumna de Bootstrap",
-    avatar: AvatarTestimonio,
+    nombre: "Joel Ronceros",
+    cargo: "Alumno de C++",
+    avatar: 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/testimonios%2Ftestimonio2.jpg?alt=media&token=1ca11893-459d-4d5d-93d6-3f7eb7cb558f',
     contenido:
-      "El mejor lugar para aprender a programar. Yo los amo con todo mi corazón",
-    numEstrellas: 5,
+      "Gracias a la academia temple aprendi a progranar y conseguir mi primer trabajo!",
+    numEstrellas: 5
   },
   {
     id: 3,
-    nombre: "Alyah Frutencio",
-    cargo: "Alumna de arte",
+    nombre: "Lucas Lopez",
+    cargo: "Alumno de inglés",
     avatar: AvatarTestimonio,
     contenido:
-      "Aprendí bastante. Es la mejor academia online del mundo!",
-    numEstrellas: 5,
+      "El mejor lugar para aprender programación e inglés. Gracias a este proyecto pude aprender mucho.",
+    numEstrellas: 5
   },
 ]

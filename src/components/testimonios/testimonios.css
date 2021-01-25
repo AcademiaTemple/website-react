@@ -29,6 +29,19 @@
     }
 }
 
+.testimonio img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .testimonio img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
 @media (min-width: 768px) {
     .datos-usuario-testimonio {
         display: flex;
