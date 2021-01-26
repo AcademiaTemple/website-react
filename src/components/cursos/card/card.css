@@ -1,27 +1,5 @@
-.card {
-    border: none !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 500ms ease-in-out;
-}
-
-.card:hover {
-    box-shadow: 0 4px 8px 0#cfe6ff, 0 6px 20px 0#b3d7fc;
-}
-
-.card-img-top {
-    width: 100%;
-    height: auto;
-}
-
-.card-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.card-text {
-    font-size: 1.5rem;
-    height: 44px;
-    overflow: hidden;
+.card-body .txt-descripcion {
+    height: 4.4rem;
 }
 
 .rounded-img-course {

@@ -24,7 +24,7 @@ function Card(props) {
       </div>
       <div className="card-body">
         <h5 className="card-title">{props.titulo}</h5>
-        <p className="card-text">{props.descBreve}</p>
+        <p className="card-text txt-descripcion clamp clamp-2">{props.descBreve}</p>
         <Link className="boton btn-principal d-block" to={`/course/?id=${props.id}`}>
           Ingresar
         </Link>

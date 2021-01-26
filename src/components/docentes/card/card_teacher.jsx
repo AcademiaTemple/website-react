@@ -16,7 +16,7 @@ export default function Card({ data }) {
           <h2 className="mb-4">
             {data.nombres + ' ' + data.apellidos}
           </h2>
-          <p className="mb-4">{data.sobreMi}</p>
+          <p className="mb-4 txt-sobremi clamp clamp-3">{data.sobreMi}</p>
           <div className="btn-toolbar mb-5 etiquetas-card-teacher">
             {
               data.etiquetas.map((etiqueta, indice) => (
