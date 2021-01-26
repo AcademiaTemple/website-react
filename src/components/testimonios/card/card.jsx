@@ -1,6 +1,6 @@
 import React from "react"
-import "./card.css"
 import star from "../../../../static/star.svg"
+import "./card.css"
 
 export default function Card(props) {
   var getRating = () => {

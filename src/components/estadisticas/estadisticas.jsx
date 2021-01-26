@@ -4,7 +4,6 @@ import logoLentes from "../../img/lentes.png"
 import logoLibros from "../../img/libro.png"
 import logoCheck from "../../img/check.png"
 import logoEstadistica from "../../img/estadistica.png"
-import "../../styles/index.css"
 import "./estadisticas.css"
 
 export default function Estadisticas() {

@@ -1,1 +1,1 @@
-export {default} from './pestanas'
+export { default } from './pestanas'

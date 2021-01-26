@@ -4,7 +4,7 @@ import TablaDocentes from '../components/tabla/docentes'
 import TablaCursos from '../components/tabla/cursos'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage'
 
 export default function Admin({ location }) {
@@ -16,7 +16,7 @@ export default function Admin({ location }) {
     const [indPestanaActiva, estIndPestanaActiva] = useState(0);
 
     if (!usuario) {
-        history.push('login');        
+        history.push('login');
     }
 
     return (

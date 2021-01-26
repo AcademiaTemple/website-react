@@ -1,7 +1,7 @@
 import React from "react"
-import "./testimonios.css"
 import ImgEstrella from "../../img/estrella.svg"
 import { testimonios } from "./testimonios-data"
+import "./testimonios.css"
 
 export default function Testimonios() {
   return (
