@@ -8,7 +8,6 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import 'bootstrap/dist/css/bootstrap.css';
 import "@fortawesome/fontawesome-free/css/all.css";
 import "plyr/dist/plyr.css";
-import './styles/index.css';
 
 ReactDOM.render(
   <TempleApp />,
