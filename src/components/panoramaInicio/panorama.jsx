@@ -9,12 +9,12 @@ const PanoramaInicio = () => {
     <header className="bg-img">
       <Navbar usarTransparencia={true} />
       <div className="contenedor contenido-header">
-        <Fade right>
+        <Fade down>
           <h1>
             El secreto para salir adelante <br /> es simplemente empezar
         </h1>
         </Fade>
-        <Fade right>
+        <Fade down>
         <Link className="boton boton-header-curso" to="/courses">
           Cursos
         </Link>
