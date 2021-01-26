@@ -13,7 +13,7 @@ export default function Inicio() {
 
   const [verTodo, estVerTodo] = useState(false);
   const [ancho, estAncho] = useState(0);
- 
+
   const alternarVerTodo = () => {
     estVerTodo(!verTodo);
   }

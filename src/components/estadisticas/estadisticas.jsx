@@ -4,6 +4,7 @@ import logoLentes from "../../img/lentes.png"
 import logoLibros from "../../img/libro.png"
 import logoCheck from "../../img/check.png"
 import logoEstadistica from "../../img/estadistica.png"
+import Fade from 'react-reveal/Fade'
 import "./estadisticas.css"
 
 export default function Estadisticas() {
@@ -21,33 +22,39 @@ export default function Estadisticas() {
             Si quieres dictar en la comunidad, escríbenos.
           </p>
           <div className="iconos">
-            <div className="icono">
-              <p className="numero-estadistica">+ 5.4k</p>
-              <div className="contenedor-img">
-                <div className="imagen-estadistica">
-                  <img src={logoUsuario} alt="logo-alumnos" />
+            <Fade down>
+              <div className="icono">
+                <p className="numero-estadistica">+5.4k</p>
+                <div className="contenedor-img">
+                  <div className="imagen-estadistica">
+                    <img src={logoUsuario} alt="logo-alumnos" />
+                  </div>
                 </div>
+                <p className="texto-estadistica">Miembros</p>
               </div>
-              <p className="texto-estadistica">Miembros</p>
-            </div>
-            <div className="icono">
-              <p className="numero-estadistica">+ 20</p>
-              <div className="contenedor-img">
-                <div className="imagen-estadistica">
-                  <img src={logoLentes} alt="logo-alumnos" />
+            </Fade>
+            <Fade down>
+              <div className="icono">
+                <p className="numero-estadistica">+20</p>
+                <div className="contenedor-img">
+                  <div className="imagen-estadistica">
+                    <img src={logoLentes} alt="logo-alumnos" />
+                  </div>
                 </div>
+                <p className="texto-estadistica">Docentes</p>
               </div>
-              <p className="texto-estadistica">Docentes</p>
-            </div>
-            <div className="icono">
-              <p className="numero-estadistica">+ 30</p>
-              <div className="contenedor-img">
-                <div className="imagen-estadistica">
-                  <img src={logoLibros} alt="logo-curso" />
+            </Fade>
+            <Fade down>
+              <div className="icono">
+                <p className="numero-estadistica">+30</p>
+                <div className="contenedor-img">
+                  <div className="imagen-estadistica">
+                    <img src={logoLibros} alt="logo-curso" />
+                  </div>
                 </div>
+                <p className="texto-estadistica">Cursos</p>
               </div>
-              <p className="texto-estadistica">Cursos y talleres</p>
-            </div>
+            </Fade>
           </div>
         </div>
         <div className="mision-vision">
