@@ -108,7 +108,7 @@ export default function Course(props) {
                                         {curso.profesor.nombres + ' ' + curso.profesor.apellidos}
                                     </Link>
                                 </h4>
-                                <p className="descripcion-curso">
+                                <p className="descripcion-curso clamp clamp-2">
                                     {curso.profesor.sobreMi}
                                 </p>
                             </div>
