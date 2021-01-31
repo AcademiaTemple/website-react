@@ -28,6 +28,7 @@ html {
     background-color: #4dc6f3;
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
     /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 
@@ -670,21 +671,6 @@ h4 {
 
 .datos-perfil-docente {
     text-align: center;
-}
-
-.titulo-carrera {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.8rem;
-    line-height: 10px;
-}
-
-@media (min-width: 768px) {
-    .titulo-carrera {
-        font-size: 2rem;
-        line-height: 15px;
-    }
 }
 
 .titulos-docente {

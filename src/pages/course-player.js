@@ -29,6 +29,10 @@ export default function Course(props) {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+    useEffect(() => {
         estCargandoEpisodios(true);
         obtClasesCurso(idCurso)
             .then(episodios => {
@@ -36,7 +40,7 @@ export default function Course(props) {
                 estUrlVideo(construirUrlVideo(obtUrlPorIdVideo(episodios, idEpisodio)));
                 estCargandoEpisodios(false);
             })
-    }, [idCurso, idEpisodio])
+    }, [idCurso, idEpisodio]);
 
     useEffect(() => {
         const player = new Plyr('#player', {

@@ -12,7 +12,7 @@ export default prop => {
           {prop.titulo}
           {prop.parrafo && (
             <div className="Detalle">
-              <button
+              <span
                 className={!mostrarMas ? "Ocultar" : ""}
                 onClick={() => {
                   setMostrarMas(false)
@@ -20,15 +20,15 @@ export default prop => {
                 }}
               >
                 <i className="fa fa-angle-down"></i>
-              </button>
-              <button
+              </span>
+              <span
                 className={!mostrarMenos ? "Ocultar" : ""}
                 onClick={() => {
                   setMostrarMas(true)
                   setMostrarMenos(false)
                 }}>
                 <i className="fa fa-angle-up"></i>
-              </button>
+              </span>
             </div>
           )}
         </h2>
@@ -40,10 +40,7 @@ export default prop => {
               !mostrarMenos ? "Semi-Oculto text-content" : "text-content"
             }>
             {prop.parrafo}
-          </p>
-          <p className={!mostrarMenos ? "Ocultar text-content" : "text-content"}>
-            {prop.parrafo}
-          </p>
+          </p>          
         </div>
       )}
     </div>

@@ -45,6 +45,10 @@ export default function Course(props) {
     const history = useHistory();
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+    useEffect(() => {
         estCargando(true);
         obtCursoExtendido(idCurso)
             .then(curso => {

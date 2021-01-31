@@ -23,6 +23,10 @@ export default function Inicio() {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+}, []);
+
+  useEffect(() => {
     if (ancho === 0) {
       estAncho(window.innerWidth);
     }

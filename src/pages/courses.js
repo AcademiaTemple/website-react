@@ -18,6 +18,10 @@ export default function Courses() {
     const [cargando, estCargando] = useState(false);
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+    useEffect(() => {
         estCargando(true);
         obtCursosMuestra()
             .then(data => {

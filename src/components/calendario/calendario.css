@@ -12,10 +12,11 @@
     color: white;
 }
 
-.contenedor-agenda i {
+.contenedor-agenda i,
+.contenedor-agenda span {
     font-size: 2rem;
     cursor: pointer;
-    animation: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .contenedor-agenda i:active {

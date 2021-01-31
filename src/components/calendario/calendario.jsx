@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import { diasSemana } from "../cursos/cursos-data"
 import { obtCursosCalendario } from '../../api'
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Calendar from "react-calendar"
 import DatePicker from "react-datepicker"
 import moment from "moment"
@@ -41,10 +41,6 @@ const Calendario = () => {
     estClasesActuales(clases)
   }, [fecha, cursos])
 
-  const navegar = (idCurso) => {
-    return <Redirect to={`/course/?id=${idCurso}`} />
-  }
-
   const retrocederDia = () => {
     const nuevaFecha = moment(fecha).subtract(1, "days").toDate()
     estFecha(nuevaFecha)
@@ -56,7 +52,7 @@ const Calendario = () => {
   }
 
   const IconoCalendario = ({ value, onClick }) => (
-    <button onClick={onClick} className="fa fa-calendar-alt" aria-label="Icono"></button>
+    <span onClick={onClick} className="fa fa-calendar-alt" aria-label="Icono"></span>
   )
 
   return (
@@ -73,7 +69,7 @@ const Calendario = () => {
               </p>
 
               <div className="controles-agenda d-md-none">
-                <button onClick={retrocederDia} className="fa fa-arrow-left" aria-label="Retroceder"></button>
+                <span onClick={retrocederDia} className="fa fa-arrow-left" aria-label="Retroceder"></span>
                 <div>
                   <DatePicker
                     selected={fecha}
@@ -93,7 +89,7 @@ const Calendario = () => {
                     customInput={<IconoCalendario />}
                   />
                 </div>
-                <button onClick={avanzarDia} className="fa fa-arrow-right"aria-label="Avanzar"></button>
+                <span onClick={avanzarDia} className="fa fa-arrow-right" aria-label="Avanzar"></span>
               </div>
             </div>
             <div className="cursos-calendario">
@@ -104,7 +100,9 @@ const Calendario = () => {
                     <a target="_blank" rel="noreferrer" href={e.urlInscripcion}>
                       <i className="fa fa-clipboard-list"></i>
                     </a>
-                    <button onClick={() => navegar(e.id)} className="fa fa-eye" aria-label="Visualizar"></button>
+                    <Link to={`/course/?id=${e.id}`}>
+                      <i className="fa fa-eye" aria-label="visualizar"></i>
+                    </Link>
                   </div>
                   <p className="horario-curso-calendario">
                     {moment(e.hInicioFin[0], "HH:mm").format("hh:mm a") +
