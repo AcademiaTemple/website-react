@@ -24,6 +24,10 @@ export default function Teacher_detail(props) {
   const [pais, estPais] = useState({ name: 'País no encontrado' });
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
+
+  useEffect(() => {
     estCargando(true);
     obtPerfilProfesor(idProfesor)
       .then(profesor => {

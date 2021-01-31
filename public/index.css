@@ -677,14 +677,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     font-size: 1.8rem;
-    line-height: 10px;
-}
-
-@media (min-width: 768px) {
-    .titulo-carrera {
-        font-size: 2rem;
-        line-height: 15px;
-    }
+    line-height: 1.2;
 }
 
 .titulos-docente {
