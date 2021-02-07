@@ -235,7 +235,6 @@ export const obtRegistrosPaginadosAdmin = async (coleccion, campo, limite = 10, 
         } else {
             ref = ref.startAfter(despuesDe[campoConsulta]);
         }
-
     }
 
     return ref
