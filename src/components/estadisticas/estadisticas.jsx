@@ -26,9 +26,7 @@ export default function Estadisticas() {
               <div className="icono">
                 <p className="numero-estadistica">+5.4k</p>
                 <div className="contenedor-img">
-                  <div className="imagen-estadistica">
-                    <img src={logoUsuario} alt="logo-alumnos" />
-                  </div>
+                    <img className="imagen-estadistica" src={logoUsuario} alt="logo-alumnos" />
                 </div>
                 <p className="texto-estadistica">Miembros</p>
               </div>
@@ -37,9 +35,7 @@ export default function Estadisticas() {
               <div className="icono">
                 <p className="numero-estadistica">+20</p>
                 <div className="contenedor-img">
-                  <div className="imagen-estadistica">
-                    <img src={logoLentes} alt="logo-alumnos" />
-                  </div>
+                    <img className="imagen-estadistica" src={logoLentes} alt="logo-alumnos" />
                 </div>
                 <p className="texto-estadistica">Docentes</p>
               </div>
@@ -48,9 +44,7 @@ export default function Estadisticas() {
               <div className="icono">
                 <p className="numero-estadistica">+30</p>
                 <div className="contenedor-img">
-                  <div className="imagen-estadistica">
-                    <img src={logoLibros} alt="logo-curso" />
-                  </div>
+                    <img className="imagen-estadistica" src={logoLibros} alt="logo-curso" />
                 </div>
                 <p className="texto-estadistica">Cursos</p>
               </div>

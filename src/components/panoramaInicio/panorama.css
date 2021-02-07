@@ -45,7 +45,7 @@
     }
 }
 
-.boton-header-curso {
+.boton.boton-header-curso {
     border: 2px solid #4DC6F3;
     color: #4DC6F3;
     text-decoration: none;
@@ -54,14 +54,14 @@
 }
 
 @media (min-width: 768px) {
-    .boton-header-curso {
+    .boton.boton-header-curso {
         border: 3px solid #4DC6F3;
         font-size: 2.3rem;
         padding: 0.3rem 8rem;
     }
 }
 
-.boton-header-curso:hover {
+.boton.boton-header-curso:hover {
     text-decoration: none;
     color: white;
     border-color: white;

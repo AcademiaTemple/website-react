@@ -85,10 +85,6 @@
     }
 }
 
-.contenido-estadisticas .iconos img {
-    height: 100%;
-}
-
 @media (min-width: 768px) {
     .contenedor-estadisticas .iconos {
         margin-top: 5rem;
@@ -146,8 +142,7 @@
     }
 }
 
-.contenedor-estadisticas .imagen-estadistica {
-    border-radius: 50%;
+.contenedor-estadisticas .imagen-estadistica {    
     width: 1.8rem;
     height: 1.8rem;
 }
