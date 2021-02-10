@@ -327,6 +327,37 @@ h4 {
 
 /*Curso*/
 
+.contenedor-portada-curso {
+    height: 200px;
+    position: relative;
+}
+
+.fondo-portada-curso {
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    filter: blur(8px) brightness(110%) contrast(90%) saturate(50%);
+    -webkit-filter: blur(8px) brightness(110%) contrast(90%) saturate(50%);
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+@media (min-width: 768px) {
+    .contenedor-portada-curso {
+        height: 300px;
+    }
+}
+
+.contenedor-portada-curso img {
+    position: absolute;
+    display: block;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 6;
+}
+
 .titulo-curso {
     font-size: 2.8rem;
 }

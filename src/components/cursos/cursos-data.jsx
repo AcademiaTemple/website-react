@@ -96,3 +96,4 @@ export const cursos = [{
 ]
 
 export const diasSemana = ["LU", "MA", "MI", "JU", "VI", "SA", "DO"];
+export const nombresDiasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];

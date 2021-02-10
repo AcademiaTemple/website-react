@@ -13,8 +13,24 @@ import "./calendario.css"
 
 const Calendario = () => {
   const [cursos, estCursos] = useState([]);
-  const [fecha, estFecha] = useState(new Date());
+  const [fecha, estFecha] = useState(moment().startOf('day').toDate());
   const [clasesActuales, estClasesActuales] = useState([]);
+
+  const obtenerClasesPorFecha = () => {
+    const clases = cursos.filter(
+      curso =>
+        (moment(fecha).isBetween(
+          moment(curso.fInicioFin[0], "DD/MM/YYYY"),
+          moment(curso.fInicioFin[1], "DD/MM/YYYY"),
+          undefined,
+          '[]'
+        ) && // Verifico si está en el rango de inicio fin
+          curso.dias.includes(diasSemana[moment(fecha).isoWeekday() - 1]) && // Verifico si incluye los días de la semana especificados
+          !curso.cancelaciones.includes(moment(fecha).format("DD/MM/YYYY"))) || // Y que no esté en una fecha cancelada
+          curso.excepciones.includes(moment(fecha).format("DD/MM/YYYY")) // Si no se cumple lo primero, otra opción es que esté agregada como excepción
+    )
+    return clases
+  }
 
   useEffect(() => {
     obtCursosCalendario()
@@ -22,22 +38,7 @@ const Calendario = () => {
   }, [])
 
   useEffect(() => {
-    const obtenerClasesPorFecha = () => {
-      const clases = cursos.filter(
-        curso =>
-          (moment(fecha).isBetween(
-            moment(curso.fInicioFin[0], "DD/MM/YYYY"),
-            moment(curso.fInicioFin[1], "DD/MM/YYYY"),
-            undefined,
-            '[]'
-          ) && // Verifico si está en el rango de inicio fin
-            curso.dias.includes(diasSemana[moment(fecha).isoWeekday() - 1]) && // Verifico si incluye los días de la semana especificados
-            !curso.cancelaciones.includes(moment(fecha).format("DD/MM/YYYY"))) || // Y que no esté en una fecha cancelada
-          curso.excepciones.includes(moment(fecha).format("DD/MM/YYYY")) // Si no se cumple lo primero, otra opción es que esté agregada como excepción
-      )
-      return clases
-    }
-    const clases = obtenerClasesPorFecha()
+    const clases = obtenerClasesPorFecha();
     estClasesActuales(clases)
   }, [fecha, cursos])
 

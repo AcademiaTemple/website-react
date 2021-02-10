@@ -101,7 +101,7 @@ const TarjetaEdicion = ({ nueva, clase, idCurso, correlativo, agregar, actualiza
 
     useEffect(() => {
         estOrden(correlativo ? correlativo : clase.orden);
-        estTitulo(clase?.titulo);
+        estTitulo(clase?.titulo ? clase?.titulo : 'Clase ' + correlativo);
         estDescripcion(clase?.descripcion);
         estDuracion(clase?.duracion);
         estLink(clase?.urlVideo);
