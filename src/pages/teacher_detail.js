@@ -129,18 +129,23 @@ export default function Teacher_detail(props) {
             <ParrafoTeacher
               titulo="Mi experiencia"
               parrafo={profesor.experiencia} />
+
             <ParrafoTeacher titulo="Mis cursos" parrafo={null} />
             {
-              profesor.cursos && profesor.cursos.map(curso => (
-                <CourseTeacher
-                  key={curso.id}
-                  id={curso.id}
-                  likes={profesor.likes}
-                  urlImg={curso.urlImg}
-                  titulo={curso.titulo}
-                  descripcion={curso.descBreve}
-                />
-              ))
+              profesor.cursos && profesor.cursos.length > 0
+                ?
+                profesor.cursos.map(curso => (
+                  <CourseTeacher
+                    key={curso.id}
+                    id={curso.id}
+                    likes={profesor.likes}
+                    urlImg={curso.urlImg}
+                    titulo={curso.titulo}
+                    descripcion={curso.descBreve}
+                  />
+                ))
+                :
+                <p className="descripcion-curso">Este profesor aún no tiene cursos</p>
             }
           </Fade>
         }
