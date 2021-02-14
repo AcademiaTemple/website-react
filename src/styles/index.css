@@ -101,6 +101,16 @@ img {
 .card-title {
     font-size: 1.8rem;
     font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
+
+@media (min-width: 768px) {
+    .card-title {
+        -webkit-line-clamp: 1;
+    }
 }
 
 .card-text {
