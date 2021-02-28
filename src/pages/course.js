@@ -35,7 +35,7 @@ const obtenerTextoHorarios = ({ dias, hInicioFin }) => {
         const indice = diasSemana.indexOf(dia);
         return nombresDiasSemana[indice];
     });
-    return arrDias > 1 ? 'Cada ' : 'Este ' + arrDias.join(', ') + ' ' + porcionHora;
+    return fInicioFin[0] === fInicioFin[1] ? 'Este' : 'Cada ' + arrDias.join(', ') + ' ' + porcionHora;
 }
 
 const calcularTotalHoras = (clases) => {
