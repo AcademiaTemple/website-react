@@ -29,13 +29,17 @@ const obtenerTextoFecha = ({ fInicioFin }) => {
     }
 }
 
-const obtenerTextoHorarios = ({ dias, hInicioFin }) => {
+const obtenerTextoHorarios = ({ dias, hInicioFin, fInicioFin }) => {
     const porcionHora = 'de ' + moment(hInicioFin[0], 'HH:mm').format('hh:mma') + ' a ' + moment(hInicioFin[1], 'HH:mm').format('hh:mma');
-    const arrDias = dias.map(dia => {
-        const indice = diasSemana.indexOf(dia);
-        return nombresDiasSemana[indice];
-    });
-    return fInicioFin[0] === fInicioFin[1] ? 'Este' : 'Cada ' + arrDias.join(', ') + ' ' + porcionHora;
+    if (fInicioFin[0] === fInicioFin[1]) {
+        return obtenerOracion(moment(fInicioFin[0], 'DD/MM/YYYY').format('dddd, D [de] MMMM [del] YYYY ')+porcionHora+' (Único día)');
+    } else {
+        const arrDias = dias.map(dia => {
+            const indice = diasSemana.indexOf(dia);
+            return nombresDiasSemana[indice];
+        });
+        return 'Cada ' + arrDias.join(', ') + ' ' + porcionHora
+    }
 }
 
 const calcularTotalHoras = (clases) => {
