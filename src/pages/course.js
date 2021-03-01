@@ -32,7 +32,7 @@ const obtenerTextoFecha = ({ fInicioFin }) => {
 const obtenerTextoHorarios = ({ dias, hInicioFin, fInicioFin }) => {
     const porcionHora = 'de ' + moment(hInicioFin[0], 'HH:mm').format('hh:mma') + ' a ' + moment(hInicioFin[1], 'HH:mm').format('hh:mma');
     if (fInicioFin[0] === fInicioFin[1]) {
-        return obtenerOracion(moment(fInicioFin[0], 'DD/MM/YYYY').format('dddd, D [de] MMMM [del] YYYY ')+porcionHora+' (Único día)');
+        return obtenerOracion(moment(fInicioFin[0], 'DD/MM/YYYY').format('dddd, D [de] MMMM [del] YYYY ') + porcionHora + ' (Único día)');
     } else {
         const arrDias = dias.map(dia => {
             const indice = diasSemana.indexOf(dia);
@@ -104,7 +104,7 @@ export default function Course(props) {
                     {
                         !cargando && curso.id
                         &&
-                        <Fade bottom>
+                        <>
                             <h2 className="titulo-seccion mt-5 mb-5 text-left titulo-curso">{curso.titulo}</h2>
                             <div className="contenedor-controles-curso">
                                 <a target="_blank" className="boton btn-principal btn-rep-curso d-block" href={curso.urlInscripcion}>
@@ -170,7 +170,7 @@ export default function Course(props) {
                                     :
                                     <p className="descripcion-curso">Aún no hay videos</p>
                             }
-                        </Fade>
+                        </>
                     }
                     {
                         !cargando && !curso.id
