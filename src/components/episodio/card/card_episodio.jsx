@@ -20,7 +20,7 @@ const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
                 </h4>
             </div>
             <div className="descripcion">
-                <p>
+                <p className='clamp clamp-3'>
                     {episodio.descripcion ? episodio.descripcion : 'Sin descripción disponible'}
                 </p>
                 <span>

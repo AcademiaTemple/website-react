@@ -4,7 +4,6 @@ import Footer from "../components/footer/footer"
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
 import queryString from 'query-string'
 import GridLoader from "react-spinners/GridLoader"
-import Fade from 'react-reveal/Fade'
 import Avatar from "../components/avatar"
 import { obtenerOracion } from '../helpers/funcionesTexto'
 import { css } from "@emotion/core"
