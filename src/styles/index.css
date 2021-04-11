@@ -69,6 +69,10 @@ img {
     width: 85%;
 }
 
+.vh-50 {
+    min-height: 100vh;
+}
+
 .clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -95,7 +99,7 @@ img {
 
 .card-img-top {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .card-title {

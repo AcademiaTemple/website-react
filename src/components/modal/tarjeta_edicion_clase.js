@@ -105,7 +105,7 @@ const TarjetaEdicion = ({ nueva, clase, idCurso, correlativo, agregar, actualiza
         estDescripcion(clase?.descripcion);
         estDuracion(clase?.duracion);
         estLink(clase?.urlVideo);
-        estRecursos(arrayToStringList(clase?.recursos));
+        estRecursos(JSON.stringify(clase?.recursos));
     }, [clase]);
 
     return (

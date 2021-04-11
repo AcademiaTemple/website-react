@@ -98,7 +98,7 @@ export default function Course(props) {
                         <img src={curso?.urlImg} alt="portada-curso" />
                     </div>
                 }
-                <div className="contenedor contenedor-60">
+                <div className="contenedor contenedor-60 vh-50">
                     <GridLoader css={override} loading={cargando} size={20} />
                     {
                         !cargando && curso.id

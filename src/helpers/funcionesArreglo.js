@@ -1,4 +1,5 @@
 export const arrayToStringList = (array, separator = ',') => {
+    console.log(array)
     if (array) {
         return array.map(e => e.trim()).join(separator + ' ');
     }

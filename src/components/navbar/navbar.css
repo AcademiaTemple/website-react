@@ -48,7 +48,7 @@
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 1rem;
     color: #FFFFFF;
     margin-right: 2rem;
@@ -65,5 +65,4 @@
 #collapsibleNavbar ul li a {
     text-decoration: none;
     color: inherit;
-    font-size: 1.6rem;
 }
