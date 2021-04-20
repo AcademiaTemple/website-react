@@ -87,7 +87,7 @@ const Previsualizacion = ({ location }) => {
         setSuccess(false);
     }
 
-    const url = process.env.REACT_APP_WEBSITE + '/' + window.location.pathname + '/' + id;
+    const url = process.env.REACT_APP_WEBSITE + '/' + window.location.pathname;
 
     return (
 
