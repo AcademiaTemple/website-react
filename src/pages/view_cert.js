@@ -87,8 +87,8 @@ const Previsualizacion = ({ location }) => {
         setSuccess(false);
     }
 
-    const url = process.env.REACT_APP_WEBSITE + window.location.pathname + '/' + id;
-    
+    const url = process.env.REACT_APP_WEBSITE + '/' + window.location.pathname + '/' + id;
+
     return (
 
         <div>
@@ -120,10 +120,10 @@ const Previsualizacion = ({ location }) => {
                         }
                     </div>
                 </section>
-            </div>            
+            </div>
             <Footer />
             <div className='bottom-prev-navbar'>
-                <nav className='contenedor'>              
+                <nav className='contenedor'>
                     <button className='button-purple position-relative p-0'>
                         <FacebookShareButton
                             url={url.toString()}
