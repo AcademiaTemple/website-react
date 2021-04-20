@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 import { obtCursosMuestra, iniciarSesion } from "../api"
-import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage';
+import { almacenarUsuarioStorage, obtUsuarioStorage } from '../helpers/almUsuario';
 
 export default function Login({ location }) {
 
@@ -34,7 +34,7 @@ export default function Login({ location }) {
             iniciarSesion(correo, contrasena)
                 .then(usuario => {
                     if (usuario) {
-                        localStorage.setItem('usuario', usuario);
+                        almacenarUsuarioStorage(usuario);
                         history.push('/admin');
                     } else {
                         alert('Usuario inexistente');

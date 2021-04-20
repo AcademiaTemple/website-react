@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, useHistory } from "react-router-dom"
-import { obtUsuarioStorage } from '../../helpers/obtUsuarioStorage'
+import { obtUsuarioStorage } from '../../helpers/almUsuario'
 import { cerrarSesion } from "../../api"
 import Logo from "../../img/logo.png"
 import "./navbar.css"

@@ -8,12 +8,13 @@
     --plyr-video-controls-background: #0C2239;
     --espacio-superior-cuerpo-responsive: 86px;
     --espacio-superior-cuerpo: 116px;
+    --bottom-navbar-height: 8rem;
 }
 
 @media (min-width: 768px) {
     :root {
         --plyr-control-icon-size: 2.5rem;
-        --plyr-control-spacing: 2.5rem
+        --plyr-control-spacing: 2.5rem;
     }
 }
 
@@ -157,6 +158,15 @@ h4 {
     font-weight: 700;
 }
 
+.p-0 {
+    padding: 0 !important;
+}
+
+.py-08 {
+    padding-top: .8rem !important;
+    padding-bottom: .8rem !important;
+}
+
 .centrar-texto {
     text-align: center;
 }
@@ -196,6 +206,10 @@ h4 {
 
 .r-180 {
     transform: rotate(180deg);
+}
+
+.position-relative {
+    position: relative !important;
 }
 
 .boton {
@@ -781,6 +795,88 @@ div.contenedor-etiquetas-perfil {
     .RedesSociales-Perfil {
         text-align: center;
     }
+}
+
+/*Visor certificado*/
+
+.contenedor-visor-pdf {
+    max-width: 144rem !important;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: var(--bottom-navbar-height);
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-visor-pdf {
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+}
+
+.contenedor-visor-pdf canvas {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 50%);
+    margin-bottom: 1rem;
+}
+
+.react-pdf__Document>div {
+    width: 100%;
+}
+
+/*Barra inferior visor pdf*/
+
+.bottom-prev-navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: var(--bottom-navbar-height);
+    box-shadow: 0px 3px 6px #00000029;
+    background: rgba(12, 34, 57, 0.9);
+}
+
+.bottom-prev-navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-prev-navbar nav>button {
+    display: block;
+    flex-grow: 1;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    text-decoration: none;
+    outline: none;
+    margin-right: 1rem;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    background: rgb(15, 42, 71);
+}
+
+.bottom-prev-navbar nav>button:hover {
+    background: rgb(27, 74, 124);
+}
+
+@media (min-width: 768px) {
+    .bottom-prev-navbar button {
+        font-size: 2.2rem;
+    }
+}
+
+.bottom-prev-navbar button:last-of-type {
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: unset;
 }
 
 /*Admin*/

@@ -5,7 +5,7 @@ import TablaCursos from '../components/tabla/cursos'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import { useHistory } from 'react-router-dom'
-import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage'
+import { obtUsuarioStorage } from '../helpers/almUsuario'
 
 export default function Admin({ location }) {
 

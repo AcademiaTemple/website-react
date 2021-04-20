@@ -216,6 +216,21 @@ export const obtPais = (prefijo) => {
         .then(pais => pais);
 }
 
+// Certificados
+export const obtCertificado = async (certId) => {
+    return firestore.collection('certificados').doc(certId).get()
+        .then(async doc => {
+            if (doc.exists) {
+                return { data: { ...doc.data(), id: doc.id } }
+            } else {
+                return { error: 'No existe un certificado con ese id' }
+            }
+        })
+        .catch(error => {
+            return { error }
+        })
+}
+
 // Admin
 
 // Profesor
