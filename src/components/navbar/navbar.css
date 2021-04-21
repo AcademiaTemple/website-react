@@ -4,10 +4,17 @@
 
 .navbar {
     transition: all .2s ease;
+    padding: 0 1rem !important;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: .5rem 1rem !important;
+    }
 }
 
 .navbar-dark .navbar-toggler-icon {
-    padding: 2rem !important;
+    padding: 1.8rem !important;
 }
 
 .scrolled {
@@ -16,13 +23,13 @@
 
 .logo, .logo img {
     box-sizing: content-box;
-    width: 5rem;
+    width: 50px;
 }
 
 @media (min-width: 768px) {
     .logo, .logo img {
         box-sizing: content-box;
-        width: 8rem;
+        width: 80px;
     }
 }
 

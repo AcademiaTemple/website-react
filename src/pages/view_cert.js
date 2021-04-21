@@ -56,7 +56,7 @@ const Previsualizacion = ({ location }) => {
         if (idCert) {
             obtCertificado(idCert).then(({ data, error }) => {
                 if (!error) {
-                    const { resultUrl, course, name } = data;
+                    const { resultUrl, course, teachers, issuedAt, name } = data;
                     setId(idCert);
                     setResultUrl(resultUrl);
                     setCourse(course);
@@ -98,25 +98,27 @@ const Previsualizacion = ({ location }) => {
                 <section className='contenedor-visor-pdf position-relative'>
                     <div>
                         {
-                            resultUrl &&
-                            <Document
-                                file={resultUrl}
-                                onLoadSuccess={onDocumentLoadSuccess}
-                                onLoadError={onDocumentError}
-                                loading={() => setIsLoading(true)}
-                                externalLinkTarget={'_blank'}>
-                                {
-                                    Array.from(
-                                        new Array(numPages),
-                                        (el, index) => (
-                                            <Page
-                                                key={`page_${index + 1}`}
-                                                pageNumber={index + 1}
-                                            />
-                                        ),
-                                    )
-                                }
-                            </Document>
+                            resultUrl && !isLoading &&
+                            <>
+                                <h2 className="titulo-seccion mb-4">{course.name}</h2>
+                                <Document
+                                    file={resultUrl}
+                                    onLoadSuccess={onDocumentLoadSuccess}
+                                    onLoadError={onDocumentError}
+                                    externalLinkTarget={'_blank'}>
+                                    {
+                                        Array.from(
+                                            new Array(numPages),
+                                            (el, index) => (
+                                                <Page
+                                                    key={`page_${index + 1}`}
+                                                    pageNumber={index + 1}
+                                                />
+                                            ),
+                                        )
+                                    }
+                                </Document>
+                            </>
                         }
                     </div>
                 </section>

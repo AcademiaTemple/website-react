@@ -823,8 +823,9 @@ div.contenedor-etiquetas-perfil {
     margin-bottom: 1rem;
 }
 
-.react-pdf__Document>div {
-    width: 100%;
+.react-pdf__Document {
+    padding: 2px;
+    overflow: hidden;
 }
 
 /*Barra inferior visor pdf*/
