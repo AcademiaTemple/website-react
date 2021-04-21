@@ -14,17 +14,17 @@
 
 .contenedor-spinner-img {
     position: relative;
-    height: 250px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
     .contenedor-spinner-img {
-        height: 200px;
+        height: 220px;
     }
-}*/
+}
 
 .contenedor-tarjeta-curso .spinner-border {
     width: 50px;
