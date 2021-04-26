@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import Carrusel from "../components/carrusel/carrusele"
 import CardTeacher from "../components/docentes/card/card_teacher"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
@@ -31,9 +30,8 @@ export default function Teachers({ data }) {
     <div>
       <Navbar />
       <div className="cuerpo-pagina">
-        <Carrusel />
         <div className="contenedor">
-          <h2 className="titulo-seccion mt-5">¡Conoce a nuestros docentes!</h2>
+          <h2 className="titulo-seccion">¡Conoce a nuestros docentes!</h2>
         </div>
         <div className="contenedor my-5">
           <GridLoader css={override} loading={cargando} size={20} />
@@ -48,8 +46,8 @@ export default function Teachers({ data }) {
             <p>No hay profesores</p>
           }
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

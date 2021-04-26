@@ -209,6 +209,11 @@ export const cerrarSesion = async () => {
     });
 }
 
+// Eventos
+export const guardarInscripcion = async (object) => {
+    return firestore.collection('inscripciones').doc().set({ ...object, createdAt: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true });
+}
+
 // País
 export const obtPais = (prefijo) => {
     return fetch('https://restcountries.eu/rest/v2/alpha/' + prefijo)

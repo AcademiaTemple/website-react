@@ -104,7 +104,7 @@ export default function Course(props) {
                         !cargando && curso.id
                         &&
                         <>
-                            <h2 className="titulo-seccion mt-5 mb-5 text-left titulo-curso">{curso.titulo}</h2>
+                            <h2 className="titulo-seccion text-left titulo-curso">{curso.titulo}</h2>
                             <div className="contenedor-controles-curso">
                                 <a target="_blank" className="boton btn-principal btn-rep-curso d-block" href={curso.urlInscripcion}>
                                     <i className="fas fa-edit mr-3"></i>
@@ -177,8 +177,8 @@ export default function Course(props) {
                         <p>No se pudo cargar el curso</p>
                     }
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }

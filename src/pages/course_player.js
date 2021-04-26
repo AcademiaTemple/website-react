@@ -54,7 +54,7 @@ export default function Course(props) {
     return (
         <div>
             <Navbar />
-            <div className="cuerpo-pagina">
+            <div className="cuerpo-pagina pb-0">
                 <div className="contenedor-reproductor">
                     <div className="contenedor-video">
                         <div key={idVideo} className="plyr__video-embed" id="player">

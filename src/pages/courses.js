@@ -34,7 +34,7 @@ export default function Courses() {
         <div>
             <Navbar />
             <div className="contenedor cuerpo-pagina">
-                <h2 className="titulo-seccion mt-5">Ingresa a nuestros cursos</h2>
+                <h2 className="titulo-seccion">Ingresa a nuestros cursos</h2>
                 <div className="row">
                     <GridLoader css={override} loading={cargando} size={20} />
                     {

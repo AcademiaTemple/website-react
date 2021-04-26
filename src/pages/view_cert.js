@@ -40,7 +40,7 @@ const Previsualizacion = ({ location }) => {
 
         const { test, origin, fbclid, templated } = queryString.parse(location.search);
 
-        const idCert = history.location.pathname.toString().replace(/\//g, '').replace(/view_cert/g, '');
+        const idCert = history.location.pathname.toString().replace(/\//g, '').replace(/view-cert/g, '');
 
         if (test) {
             setIsTest(true);
@@ -103,9 +103,9 @@ const Previsualizacion = ({ location }) => {
                 {
                     resultUrl && !isLoading &&
                     <>
-                        <section className='contenedor-visor-pdf position-relative'>
+                        <section className='contenedor contenedor-visor-pdf position-relative'>
                             <div>
-                                <h2 className="titulo-seccion mb-5">{course.nombre}</h2>
+                                <h2 className="titulo-seccion">{course.nombre}</h2>
                                 <Document
                                     file={resultUrl}
                                     onLoadSuccess={onDocumentLoadSuccess}
