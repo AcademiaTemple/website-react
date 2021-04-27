@@ -36,7 +36,7 @@
 }
 
 .selectable-list-item:hover {
-    background: #ded9ff;
+    background: rgb(209, 231, 255);
 }
 
 .dropdown-list-tag {

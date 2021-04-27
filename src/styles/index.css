@@ -31,6 +31,7 @@ html {
     background-color: #4dc6f3;
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
     /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 
@@ -148,6 +149,10 @@ h4 {
 
 /** Utilidades **/
 
+.text-align-center {
+    text-align: center !important;
+}
+
 .color-dark-blue {
     color: #212529 !important;
 }
@@ -205,6 +210,10 @@ h4 {
 .py-08 {
     padding-top: .8rem !important;
     padding-bottom: .8rem !important;
+}
+
+.m0-auto {
+    margin: 0 auto !important;
 }
 
 .centrar-texto {

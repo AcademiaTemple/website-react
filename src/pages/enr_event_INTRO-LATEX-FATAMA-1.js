@@ -10,13 +10,13 @@ import HelmetMetaData from "../components/helmet";
 import Avatar from "../components/avatar";
 import ImgFondo from '../img/intro-latex-fatama-1.png';
 import { aNombre, extraerLink } from '../helpers/funcionesTexto';
-import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido, esLinkInvalido } from '../helpers/validadores';
+import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido } from '../helpers/validadores';
 import { guardarInscripcion } from '../api';
 import { useStepObserver } from '../hooks/useStepObserver';
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleLeft, faAngleRight, faCheck, faCheckCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons';
-import { contactTypes, inscriptionTypes } from '../data/data';
+import { contactTypes } from '../data/data';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -40,7 +40,6 @@ const Inscripcion = () => {
     const [phone, setPhone] = useState('');
     const [messengerType, setMessengerType] = useState(contactTypes[0]);
     const [email, setEmail] = useState('');
-    const [inscriptionType, setInscriptionType] = useState(inscriptionTypes[0]);
     const [link, setLink] = useState('');
     const [points, setPoints] = useState([]);
 
@@ -60,10 +59,6 @@ const Inscripcion = () => {
 
     const updMessengerType = (val) => {
         setMessengerType(val);
-    }
-
-    const updInscriptionType = (val) => {
-        setInscriptionType(val);
     }
 
     const updLink = (e) => {
@@ -102,14 +97,12 @@ const Inscripcion = () => {
 
     const saveChanges = () => {
 
-        const idEvento = history.location.pathname.toString().replace(/\//g, '').replace(/ins_evento/g, '');
+        const idEvento = history.location.pathname.toString().replace(/\//g, '').replace(/enr-event/g, '');
 
         const data = {
             eventId: idEvento,
             eventName: 'III taller de Latex',
             name: aNombre(name.trim()),
-            link: extraerLink(link.trim()),
-            role: inscriptionType.type,
             age: parseInt(age),
             phone: phone.trim(),
             email: email.trim()
@@ -124,7 +117,7 @@ const Inscripcion = () => {
 
     const checkErrors = () => {
 
-        let error = (esNombreInvalido(name) || esEdadInvalida(age) || esTelefonoInvalido(phone) || esCorreoInvalido(email) || esLinkInvalido(link, inscriptionType.type != 'AUT'));
+        let error = (esNombreInvalido(name) || esEdadInvalida(age) || esTelefonoInvalido(phone) || esCorreoInvalido(email));
 
         // Custom errors
         if (!includesPoint('SI')) {
@@ -170,13 +163,13 @@ const Inscripcion = () => {
                                 <div className='form-container text-align-center'>
                                     <Fade bottom>
                                         <FontAwesomeIcon color={'#3DE58D'} icon={faCheckCircle} style={{ fontSize: '8rem' }} />
-                                        <h3 className='mt-1 mb-1'>Listo</h3>
+                                        <h3 className='titulo-seccion mt-2 mb-2'>Listo</h3>
                                     </Fade>
-                                    <p className='txt-responsive-form m0-auto'>¡No olvides unirte al grupo! Presiona el botón de abajo</p>
+                                    <p className='descripcion-curso m0-auto'>¡No olvides unirte al grupo! Presiona el botón de abajo</p>
                                     <FontAwesomeIcon icon={faAngleDown} size='2x' />
 
                                     <div className='form-buttons-container mt-3'>
-                                        <a href="https://chat.whatsapp.com/DxKbgbkfa3j097I9mbbpAc" className='button button-green m0-auto'>
+                                        <a href="https://chat.whatsapp.com/DxKbgbkfa3j097I9mbbpAc" className='boton btn-principal m0-auto'>
                                             <FontAwesomeIcon icon={faWhatsapp} size='1x' />
                                             {' '}
                                             <span>
@@ -226,10 +219,10 @@ const Inscripcion = () => {
 
                                                     <div className='form-group'>
                                                         <ul>
-                                                            <li><b>Número de sesiones:</b> 6</li>
+                                                            <li><b>Número de sesiones:</b> 3</li>                                                           
+                                                            <li><b>Horarios:</b> 3, 7 y 14 de mayo, a las Xpm (Hora Lima - Colombia)</li>
                                                             <li><b>Profesor:</b> Jorge Fatama</li>
                                                             <li><b>Plataforma:</b> Google Meets</li>
-                                                            <li><b>Horarios:</b> Viernes 23 abril a las 4pm (Hora Lima - Colombia)</li>
                                                         </ul>
                                                     </div>
 

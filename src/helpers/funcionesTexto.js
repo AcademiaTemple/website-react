@@ -21,16 +21,16 @@ export const aOracion = (text, limit) => {
 
 export const aNombre = (rawName) => {
   let nameArray = rawName.replace(/'.'/g, '').trim().split(' ');
-  nameArray = nameArray.filter(name => name != '').map(name => name && toSentence(name.trim()));
+  nameArray = nameArray.filter(name => name != '').map(name => name && aOracion(name.trim()));
   return nameArray.join(' ');
 }
 
 export const extraerLink = (rawLink) => {
   if (rawLink) {
-      const matchedArray = rawLink.match(/(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g);
-      if (matchedArray) {
-          return matchedArray[0];
-      }
+    const matchedArray = rawLink.match(/(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g);
+    if (matchedArray) {
+      return matchedArray[0];
+    }
   }
   return '';
 }
