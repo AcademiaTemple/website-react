@@ -115,3 +115,18 @@ export const isSobreInvalido = (about, notRequired) => {
         return 'El resumen de tu historia debe contener de 1 a 1000 caracteres';
     }
 }
+
+export const esProfesionInvalida = (profession, notRequired) => {
+    if (!profession && !notRequired) {
+        return 'La profesión está vacía';
+    }
+    else if (!profession && notRequired) {
+        return null;
+    }
+    else if (!(/^(?!\s*$).{1,50}/.test(profession))) {
+        return 'Tu profesión debe tener de 1 a 50 caracteres';
+    }
+    else if (!(/^[a-zA-Z\sáéíóúñÑ]*$/.test(profession))) {
+        return 'Tu profesión no puede tener caracteres especiales';
+    }
+}

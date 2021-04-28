@@ -81,6 +81,9 @@ img {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    min-height: unset !important;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .clamp-2 {

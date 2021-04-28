@@ -9,14 +9,14 @@ import Fade from 'react-reveal/Fade';
 import HelmetMetaData from "../components/helmet";
 import Avatar from "../components/avatar";
 import ImgFondo from '../img/intro-latex-fatama-1.png';
-import { aNombre, extraerLink } from '../helpers/funcionesTexto';
-import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido } from '../helpers/validadores';
+import { aNombre } from '../helpers/funcionesTexto';
+import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido, esProfesionInvalida } from '../helpers/validadores';
 import { guardarInscripcion } from '../api';
 import { useStepObserver } from '../hooks/useStepObserver';
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleLeft, faAngleRight, faCheck, faCheckCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons';
-import { contactTypes } from '../data/data';
+import { contactTypes, fromTypes, knowLevelTypes } from '../data/data';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -40,7 +40,9 @@ const Inscripcion = () => {
     const [phone, setPhone] = useState('');
     const [messengerType, setMessengerType] = useState(contactTypes[0]);
     const [email, setEmail] = useState('');
-    const [link, setLink] = useState('');
+    const [profession, setProfession] = useState('');
+    const [fromType, setFromType] = useState(fromTypes[0]);
+    const [knowLevelType, setKnowLevelType] = useState(knowLevelTypes[0]);
     const [points, setPoints] = useState([]);
 
     const history = useHistory();
@@ -61,12 +63,20 @@ const Inscripcion = () => {
         setMessengerType(val);
     }
 
-    const updLink = (e) => {
-        setLink(e.target.value);
+    const updFromType = (val) => {
+        setFromType(val);
+    }
+
+    const updKnowLevelType = (val) => {
+        setKnowLevelType(val);
     }
 
     const updEmail = (e) => {
         setEmail(e.target.value);
+    }
+
+    const updProfession = (e) => {
+        setProfession(e.target.value);
     }
 
     const selectPoint = (id) => {
@@ -104,8 +114,11 @@ const Inscripcion = () => {
             eventName: 'III taller de Latex',
             name: aNombre(name.trim()),
             age: parseInt(age),
+            profession: profession,
             phone: phone.trim(),
-            email: email.trim()
+            email: email.trim(),
+            fromType: fromType.type,
+            knowLevelType: knowLevelType.type
         };
 
         guardarInscripcion(data).then(() => {
@@ -117,7 +130,7 @@ const Inscripcion = () => {
 
     const checkErrors = () => {
 
-        let error = (esNombreInvalido(name) || esEdadInvalida(age) || esTelefonoInvalido(phone) || esCorreoInvalido(email));
+        let error = (esNombreInvalido(name) || esEdadInvalida(age) || esTelefonoInvalido(phone) || esCorreoInvalido(email) || esProfesionInvalida(profession));
 
         // Custom errors
         if (!includesPoint('SI')) {
@@ -219,8 +232,8 @@ const Inscripcion = () => {
 
                                                     <div className='form-group'>
                                                         <ul>
-                                                            <li><b>Número de sesiones:</b> 3</li>                                                           
-                                                            <li><b>Horarios:</b> 3, 7 y 14 de mayo, a las Xpm (Hora Lima - Colombia)</li>
+                                                            <li><b>Número de sesiones:</b> 3</li>
+                                                            <li><b>Horarios:</b> 6, 7 y 8 de mayo, de 4pm a 7pm (Hora Lima - Colombia)</li>
                                                             <li><b>Profesor:</b> Jorge Fatama</li>
                                                             <li><b>Plataforma:</b> Google Meets</li>
                                                         </ul>
@@ -234,8 +247,8 @@ const Inscripcion = () => {
                                                 <div className='step-2'>
 
                                                     <div className='form-group'>
-                                                        <label htmlFor="txtNombres">¿Cómo te llamas?</label>
-                                                        <input minLength="1" maxLength="50" type="text" value={name} onChange={updName} id="txtNombres" placeholder="Ingresa tus nombres" />
+                                                        <label htmlFor="txtNombres">¿Cuáles son tus nombres completos?</label>
+                                                        <input minLength="1" maxLength="50" type="text" value={name} onChange={updName} id="txtNombres" placeholder="Esto irá en tu certificado" />
                                                     </div>
                                                     <div className='form-group'>
                                                         <label htmlFor="txtEdad">¿Qué edad tienes?</label>
@@ -260,6 +273,30 @@ const Inscripcion = () => {
                                                 <div className='step-3'>
 
                                                     <div className='form-group'>
+
+                                                        <div className='form-group'>
+                                                            <label htmlFor="txtProfesion">¿Cuál es tu profesión o cuál estudias?</label>
+                                                            <input minLength="1" maxLength="50" type="text" value={profession} onChange={updProfession} id="txtProfesion" placeholder="Ingresa tu profesión" />
+                                                        </div>
+
+                                                        <div className='form-group'>
+                                                            <label htmlFor="txtLink">¿Cómo te enteraste del curso?</label>
+                                                            <DropdownImage
+                                                                stretch
+                                                                selectedItem={fromType}
+                                                                list={fromTypes}
+                                                                select={updFromType} />
+                                                        </div>
+
+                                                        <div className='form-group'>
+                                                            <label htmlFor="txtLink">¿Cuánto conoces de LaTeX?</label>
+                                                            <DropdownImage
+                                                                stretch
+                                                                selectedItem={knowLevelType}
+                                                                list={knowLevelTypes}
+                                                                select={updKnowLevelType} />
+                                                        </div>
+
                                                         <div className='form-group'>
                                                             <label htmlFor="txtLink">He leído los horarios y confirmo mi asistencia.</label>
                                                             {
