@@ -27,6 +27,7 @@ const Previsualizacion = ({ location }) => {
     const [origin, setOrigin] = useState('OTHER');
     const [course, setCourse] = useState('');
     const [name, setName] = useState('');
+    const [condition, setCondition] = useState('');
     const [teachers, setTeachers] = useState([]);
     const [issuedAt, setIssuedAt] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -60,13 +61,14 @@ const Previsualizacion = ({ location }) => {
         if (idCert) {
             obtCertificado(idCert).then(({ data, error }) => {
                 if (!error) {
-                    const { urlCert, curso, profesores, creadoEn, otorgadoA } = data;
+                    const { urlCert, curso, profesores, creadoEn, condicion, otorgadoA } = data;
                     setId(idCert);
                     setResultUrl(urlCert);
                     setCourse(curso);
                     setTeachers(profesores);
                     setIssuedAt(creadoEn);
                     setName(otorgadoA);
+                    setCondition(condicion);
                     setIsLoading(false);
                 } else {
                     alert('No se encontró el archivo. Intente más tarde');
@@ -132,8 +134,8 @@ const Previsualizacion = ({ location }) => {
                             </p>
                             <h3 className="subtitulo-descripcion-curso">Condición lograda:</h3>
                             <p className="descripcion-curso">
-                                Completar el taller en vivo "Introducción a Spring Boot y Despliegue Continuo"
-                    </p>
+                                {condition}
+                            </p>
                             <h3 className="subtitulo-descripcion-curso">Profesores:</h3>
                             {
                                 teachers.map(profesor => (
