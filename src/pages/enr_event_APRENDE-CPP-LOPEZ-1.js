@@ -207,7 +207,7 @@ const Inscripcion = () => {
 
                                                     <div className='form-group mb-0'>
                                                         <h2 className='titulo-seccion'>¡Bienvenido(a) al curso!</h2>
-                                                        <p className='descripcion-curso'>
+                                                        <p className='descripcion-curso no-break'>
                                                             Cuando existe muy poco de <b>algo,</b> su valor tiende a subir. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
                                                             Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
                                                             Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
@@ -223,7 +223,7 @@ const Inscripcion = () => {
                                                                             {hostName}
                                                                         </Link>
                                                                     </h4>
-                                                                    <p className="descripcion-curso clamp clamp-2">
+                                                                    <p className="descripcion-curso clamp clamp-2 no-break">
                                                                         Bienvenidos a todos, mi nombre es Rodrigo López y soy integrante de la comunidad PUCP. Mi pasión es enseñar y hacer de este mundo un lugar mejor.
                                                                     </p>
                                                                 </div>

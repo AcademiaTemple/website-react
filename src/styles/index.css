@@ -96,6 +96,11 @@ img {
   -webkit-line-clamp: 3;
 }
 
+.no-break {
+  overflow-wrap: unset !important;
+  word-break: keep-all !important;
+}
+
 .card {
   border: none !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.19);
