@@ -8,7 +8,7 @@ import StepManager from '../components/forms/step-manager/step-manager';
 import Fade from 'react-reveal/Fade';
 import HelmetMetaData from "../components/helmet";
 import Avatar from "../components/avatar";
-import ImgFondo from '../img/intro-latex-fatama-1.png';
+import ImgFondo from '../img/intro-cpp-lopez-1.png';
 import { aNombre } from '../helpers/funcionesTexto';
 import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido, esProfesionInvalida } from '../helpers/validadores';
 import { guardarInscripcion } from '../api';
@@ -27,6 +27,9 @@ const overrideSpinnerInline = css`
   display: inline-block;
   vertical-align: middle;
 `;
+
+const mainTitle = 'Aprende C++: Una introducción';
+const hostName = 'Rodrigo López';
 
 const Inscripcion = () => {
 
@@ -111,7 +114,7 @@ const Inscripcion = () => {
 
         const data = {
             eventId: idEvento,
-            eventName: 'III taller de Latex',
+            eventName: mainTitle,
             name: aNombre(name.trim()),
             age: parseInt(age),
             profession: profession,
@@ -160,13 +163,13 @@ const Inscripcion = () => {
 
     return (
         <div>
-            <HelmetMetaData title="III taller de introducción a LaTeX - Academia Temple" description="¿Quieres obras buenas? Acompáñanos en esta lectura en vivo y descubre los mejores escritos junto a Laydy Czulewyez." />
+            <HelmetMetaData title={mainTitle + ' - Academia Temple'} description="¿Quieres obras buenas? Acompáñanos en esta lectura en vivo y descubre los mejores escritos junto a Laydy Czulewyez." />
             <Navbar />
             <main className="cuerpo-pagina">
                 <div className="full-background" style={{ backgroundImage: `url(${ImgFondo})` }} />
                 <section className='contenedor contenedor-60 section position-relative z-2'>
-                    <h2 className='titulo-seccion mb-4 text-left titulo-curso'>III taller de introducción a LaTeX</h2>
-                    <p className='descripcion-curso color-dark-blue'>Con Jorge Fatama</p>
+                    <h2 className='titulo-seccion mb-4 text-left titulo-curso'>{mainTitle}</h2>
+                    <p className='descripcion-curso color-dark-blue'>Con {hostName}</p>
                 </section>
                 <section className='contenedor contenedor-60 position-relative'>
                     <div className='floating-form'>
@@ -182,7 +185,7 @@ const Inscripcion = () => {
                                     <FontAwesomeIcon icon={faAngleDown} size='2x' />
 
                                     <div className='form-buttons-container mt-3'>
-                                        <a href="https://chat.whatsapp.com/DxKbgbkfa3j097I9mbbpAc" className='boton btn-principal m0-auto'>
+                                        <a href="https://chat.whatsapp.com/HML2Rfk2A6y5aSdrQr5LzW" className='boton btn-principal m0-auto'>
                                             <FontAwesomeIcon icon={faWhatsapp} size='1x' />
                                             {' '}
                                             <span>
@@ -205,24 +208,23 @@ const Inscripcion = () => {
                                                     <div className='form-group mb-0'>
                                                         <h2 className='titulo-seccion'>¡Bienvenido(a) al curso!</h2>
                                                         <p className='descripcion-curso'>
-                                                            Inscríbete y <b>aprende a crear documentos profesionales</b> con uno de los lenguajes más conocidos
-                                                        para ese propósito: <b>LaTeX</b>.<br /><br />
-                                                        Las <b>fórmulas</b> matemáticas, los estilos y las <b>limitaciones</b> de Word serán cosa del pasado cuando domines
-                                                        esta gran herramienta.<br /><br />
-                                                            <b>Al final de este curso,</b> te brindaremos un <b>certificado</b> de participación si es que <b>asistes a todas
+                                                            Cuando existe muy poco de <b>algo,</b> su valor tiende a subir. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
+                                                            Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
+                                                            Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
+                                                            <b>Al final de este curso,</b> te brindaremos un <b>certificado</b> si logras pasar <b> la prueba que el maestro dará.
                                                         las clases</b>.
                                                         <div className="contenedor-curso-profesor mt-5">
                                                                 <div className="contenedor-img">
-                                                                    <Avatar img={'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FpLmrref9VE4ywTYQMkIy?alt=media&token=b658cd73-73f9-4fad-8411-3dff5ece5ac8'} />
+                                                                    <Avatar img={'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f'} />
                                                                 </div>
                                                                 <div className="contenedor-descripcion">
                                                                     <h4>
-                                                                        <Link to={`/teacher-detail/?id=${'pLmrref9VE4ywTYQMkIy'}`}>
-                                                                            Jorge Fatama
+                                                                        <Link to={`/teacher-detail/?id=${'ZGgdEwJNZjgbZ59IcEGs'}`}>
+                                                                            {hostName}
                                                                         </Link>
                                                                     </h4>
                                                                     <p className="descripcion-curso clamp clamp-2">
-                                                                        Mi nombre es Jorge Fatama. Soy bachiller en Ciencias con mención en Ingeniería Informática por la PUCP, con interés en un enfoque académico en bases de datos no relacionales.
+                                                                        Bienvenidos a todos, mi nombre es Rodrigo López y soy integrante de la comunidad PUCP. Mi pasión es enseñar y hacer de este mundo un lugar mejor.
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -232,9 +234,9 @@ const Inscripcion = () => {
 
                                                     <div className='form-group'>
                                                         <ul>
-                                                            <li><b>Número de sesiones:</b> 3</li>
-                                                            <li><b>Horarios:</b> 6, 7 y 8 de mayo, de 4pm a 7pm (Hora Lima - Colombia)</li>
-                                                            <li><b>Profesor:</b> Jorge Fatama</li>
+                                                            <li><b>Número de sesiones:</b> 1</li>
+                                                            <li><b>Horarios:</b> 19 de junio, de 3pm a 6pm (Hora Lima - Colombia)</li>
+                                                            <li><b>Profesor:</b> {hostName}</li>
                                                             <li><b>Plataforma:</b> Google Meets</li>
                                                         </ul>
                                                     </div>
@@ -289,7 +291,7 @@ const Inscripcion = () => {
                                                         </div>
 
                                                         <div className='form-group'>
-                                                            <label htmlFor="txtLink">¿Cuánto conoces de LaTeX?</label>
+                                                            <label htmlFor="txtLink">¿Cuánto conoces de C++?</label>
                                                             <DropdownImage
                                                                 stretch
                                                                 selectedItem={knowLevelType}
