@@ -163,7 +163,7 @@ const Inscripcion = () => {
 
     return (
         <div>
-            <HelmetMetaData title={mainTitle + ' - Academia Temple'} description="¿Quieres obras buenas? Acompáñanos en esta lectura en vivo y descubre los mejores escritos junto a Laydy Czulewyez." />
+            <HelmetMetaData title={mainTitle + ' - Academia Temple'} description="¿Quieres destacar? Aprende C++." />
             <Navbar />
             <main className="cuerpo-pagina">
                 <div className="full-background" style={{ backgroundImage: `url(${ImgFondo})` }} />
@@ -211,9 +211,9 @@ const Inscripcion = () => {
                                                             Cuando existe muy poco de <b>algo,</b> su valor tiende a subir. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
                                                             Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
                                                             Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
-                                                            <b>Al final de este curso,</b> te brindaremos un <b>certificado</b> si logras pasar <b> la prueba que el maestro dará.
-                                                        las clases</b>.
-                                                        <div className="contenedor-curso-profesor mt-5">
+                                                            {/*<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá.
+                                                        las clases</b>.*/}
+                                                            <div className="contenedor-curso-profesor mt-5">
                                                                 <div className="contenedor-img">
                                                                     <Avatar img={'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f'} />
                                                                 </div>
@@ -372,7 +372,7 @@ const Inscripcion = () => {
                 </section>
             </main>
             <Footer />
-        </div>
+        </div >
     );
 }
 
