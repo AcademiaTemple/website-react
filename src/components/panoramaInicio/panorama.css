@@ -1,13 +1,16 @@
-.bg-img {
+.bg-img {    
     background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/carrusel/banner_main.jpg");
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     height: 35rem;
+    min-height: 300px;
 }
 
 @media (min-width: 768px) {
     .bg-img {
         height: 100vh;
+        min-height: 500px;
     }
 }
 
