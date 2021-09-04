@@ -56,10 +56,11 @@ const joinGroups = [
 // Descripción del curso
 const MainDescription = () => (
     <>
-        Esto es un texto de <b>prueba</b>. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
-        Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
-        Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
-        <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte.</b>
+        Si te gusta la tecnología y programación para crear cosas de tu imaginación, <b>hoy tienes esa oportunidad.</b><br />
+        Inscríbete y aprende una de las bases de datos más populares : <b>MongoDB</b>.<br />
+        <b>No hay requisitos previos</b> y solo necesitas las ganas de aprender :).<br /><br />
+        <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte que es un requito para obtener el certificado.</b> <br />
+        <b>Además,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases y si asistes a la clase completamente</b>
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
