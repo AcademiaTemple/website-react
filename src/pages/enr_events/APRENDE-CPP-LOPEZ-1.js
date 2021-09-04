@@ -1,24 +1,85 @@
 import React, { useState, useEffect } from 'react'
-import Footer from '../components/footer/footer';
-import Navbar from '../components/navbar';
-import DropdownImage from '../components/dropdown-image';
+import Footer from '../../components/footer/footer';
+import Navbar from '../../components/navbar';
+import DropdownImage from '../../components/dropdown-image';
 import ClipLoader from "react-spinners/ClipLoader";
-import Steps from '../components/forms/forms-steps';
-import StepManager from '../components/forms/step-manager/step-manager';
+import Steps from '../../components/forms/forms-steps';
+import StepManager from '../../components/forms/step-manager/step-manager';
 import Fade from 'react-reveal/Fade';
-import HelmetMetaData from "../components/helmet";
-import Avatar from "../components/avatar";
-import ImgFondo from '../img/intro-cpp-lopez-1.png';
-import { aNombre } from '../helpers/funcionesTexto';
-import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido, esProfesionInvalida } from '../helpers/validadores';
-import { guardarInscripcion } from '../api';
-import { useStepObserver } from '../hooks/useStepObserver';
+import HelmetMetaData from "../../components/helmet";
+import Avatar from "../../components/avatar";
+import { aNombre } from '../../helpers/funcionesTexto';
+import { esNombreInvalido, esEdadInvalida, esTelefonoInvalido, esCorreoInvalido, esProfesionInvalida } from '../../helpers/validadores';
+import { guardarInscripcion } from '../../api';
+import { useStepObserver } from '../../hooks/useStepObserver';
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleLeft, faAngleRight, faCheck, faCheckCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons';
-import { contactTypes, fromTypes, knowLevelTypes } from '../data/data';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { contactTypes, fromTypes, knowLevelTypes } from '../../data/data';
+import { faDiscord, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
+
+// EDITAR
+
+// Título principal del curso
+const mainTitle = 'Aprende C++: Una introducción';
+
+// Nombre del profesor
+const hostName = 'Rodrigo López';
+
+// Imagen de fondo
+const backgroundImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/formularios%2Fpastel-de-fua.jpg?alt=media&token=d0c9b41f-06ab-42d3-ba1d-f9c05c1b9ea3';
+
+
+// Id del profesor
+const teacherId = 'ZGgdEwJNZjgbZ59IcEGs';
+
+// Img del profesor
+const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f';
+
+// Descripción corta del profesor
+const teacherDescription = ' Bienvenidos a todos, mi nombre es Rodrigo López y soy integrante de la comunidad PUCP. Mi pasión es enseñar y hacer de este mundo un lugar mejor.';
+
+// Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
+const joinGroups = [
+    {
+        type: 'WSP',
+        link: 'https://chat.whatsapp.com/HML2Rfk2A6y5aSdrQr5LzW',
+        icon: faWhatsapp
+    },
+    {
+        type: 'TELEGRAM',
+        link: 'link-de-telegram',
+        icon: faTelegram
+    },
+    {
+        type: 'DISCORD',
+        link: 'link de discord',
+        icon: faDiscord
+    }
+];
+
+// Descripción del curso
+const MainDescription = () => (
+    <>
+        Cuando existe muy poco de <b>algo,</b> su valor tiende a subir. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
+        Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
+        Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
+        <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte.</b>
+    </>
+);
+//<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
+
+// Número de sesiones
+const numOfSessions = 1;
+
+// Fecha(s) del evento
+const dateTime = '19 de junio, de 3pm a 6pm (Hora Lima - Colombia)';
+
+// Plataforma(s)
+const platform = 'Google Meets';
+
+////// NO EDITAR - Lógica
 
 const steps = ['Inicio', 'Contacto', 'Listo'];
 const chkPoints = [{ id: 'SI', name: 'Sí', abrev: 'Sí' }];
@@ -27,9 +88,6 @@ const overrideSpinnerInline = css`
   display: inline-block;
   vertical-align: middle;
 `;
-
-const mainTitle = 'Aprende C++: Una introducción';
-const hostName = 'Rodrigo López';
 
 const Inscripcion = () => {
 
@@ -166,7 +224,7 @@ const Inscripcion = () => {
             <HelmetMetaData title={mainTitle + ' - Academia Temple'} description="¿Quieres destacar? Aprende C++." />
             <Navbar />
             <main className="cuerpo-pagina">
-                <div className="full-background" style={{ backgroundImage: `url(${ImgFondo})` }} />
+                <div className="full-background" style={{ backgroundImage: `url('${backgroundImg}')` }} />
                 <section className='contenedor contenedor-60 section position-relative z-2'>
                     <h2 className='titulo-seccion mb-4 text-left titulo-curso'>{mainTitle}</h2>
                     <p className='descripcion-curso color-dark-blue'>Con {hostName}</p>
@@ -181,18 +239,22 @@ const Inscripcion = () => {
                                         <FontAwesomeIcon color={'#3DE58D'} icon={faCheckCircle} style={{ fontSize: '8rem' }} />
                                         <h3 className='titulo-seccion mt-2 mb-2'>Listo</h3>
                                     </Fade>
-                                    <p className='descripcion-curso m0-auto'>¡No olvides unirte al grupo! Presiona el botón de abajo</p>
+                                    <p className='descripcion-curso m0-auto'>¡No olvides unirte a los grupos del curso!</p>
                                     <FontAwesomeIcon icon={faAngleDown} size='2x' />
 
-                                    <div className='form-buttons-container mt-3'>
-                                        <a href="https://chat.whatsapp.com/HML2Rfk2A6y5aSdrQr5LzW" className='boton btn-principal m0-auto'>
-                                            <FontAwesomeIcon icon={faWhatsapp} size='1x' />
-                                            {' '}
-                                            <span>
-                                                Unirme
-                                            </span>
-                                        </a>
-                                    </div>
+                                    {
+                                        joinGroups.map((group, index) => (
+                                            <div className={`form-buttons-container ${index == 0 ? 'mt-3' : ''} ${index == joinGroups.length - 1 ? '' : 'mb-3'}`}>
+                                                <a href={group.link} className='boton btn-principal m0-auto'>
+                                                    <FontAwesomeIcon icon={group.icon} size='1x' />
+                                                    {' '}
+                                                    <span>
+                                                        Unirme
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                                 :
                                 <>
@@ -208,23 +270,19 @@ const Inscripcion = () => {
                                                     <div className='form-group mb-0'>
                                                         <h2 className='titulo-seccion'>¡Bienvenido(a) al curso!</h2>
                                                         <p className='descripcion-curso no-break'>
-                                                            Cuando existe muy poco de <b>algo,</b> su valor tiende a subir. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
-                                                            Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
-                                                            Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
-                                                            {/*<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá.
-                                                        las clases</b>.*/}
+                                                            <MainDescription />
                                                             <div className="contenedor-curso-profesor mt-5">
                                                                 <div className="contenedor-img">
-                                                                    <Avatar img={'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f'} />
+                                                                    <Avatar img={teacherImg} />
                                                                 </div>
                                                                 <div className="contenedor-descripcion">
                                                                     <h4>
-                                                                        <Link to={`/teacher-detail/?id=${'ZGgdEwJNZjgbZ59IcEGs'}`}>
+                                                                        <Link to={`/teacher-detail/?id=${teacherId}`}>
                                                                             {hostName}
                                                                         </Link>
                                                                     </h4>
                                                                     <p className="descripcion-curso clamp clamp-2 no-break">
-                                                                        Bienvenidos a todos, mi nombre es Rodrigo López y soy integrante de la comunidad PUCP. Mi pasión es enseñar y hacer de este mundo un lugar mejor.
+                                                                        {teacherDescription}
                                                                     </p>
                                                                 </div>
                                                             </div>
@@ -234,10 +292,10 @@ const Inscripcion = () => {
 
                                                     <div className='form-group'>
                                                         <ul>
-                                                            <li><b>Número de sesiones:</b> 1</li>
-                                                            <li><b>Horarios:</b> 19 de junio, de 3pm a 6pm (Hora Lima - Colombia)</li>
+                                                            <li><b>Número de sesiones:</b> {numOfSessions}</li>
+                                                            <li><b>Horarios:</b> {dateTime}</li>
                                                             <li><b>Profesor:</b> {hostName}</li>
-                                                            <li><b>Plataforma:</b> Google Meets</li>
+                                                            <li><b>Plataforma:</b> {platform}</li>
                                                         </ul>
                                                     </div>
 
@@ -250,7 +308,7 @@ const Inscripcion = () => {
 
                                                     <div className='form-group'>
                                                         <label htmlFor="txtNombres">¿Cuáles son tus nombres completos?</label>
-                                                        <input minLength="1" maxLength="50" type="text" value={name} onChange={updName} id="txtNombres" placeholder="Esto irá en tu certificado" />
+                                                        <input minLength="1" maxLength="50" type="text" value={name} onChange={updName} id="txtNombres" placeholder="Ejemplo: Alex Chancón" />
                                                     </div>
                                                     <div className='form-group'>
                                                         <label htmlFor="txtEdad">¿Qué edad tienes?</label>
@@ -291,7 +349,7 @@ const Inscripcion = () => {
                                                         </div>
 
                                                         <div className='form-group'>
-                                                            <label htmlFor="txtLink">¿Cuánto conoces de C++?</label>
+                                                            <label htmlFor="txtLink">¿Cuánto conoces del tema a dictar?</label>
                                                             <DropdownImage
                                                                 stretch
                                                                 selectedItem={knowLevelType}
@@ -332,7 +390,7 @@ const Inscripcion = () => {
                                                         {' '}
                                                         <span className='d-none d-md-inline'>
                                                             Anterior
-                                                    </span>
+                                                        </span>
                                                     </button>
                                                 }
                                                 {
@@ -349,7 +407,7 @@ const Inscripcion = () => {
                                                             <button onClick={send} className='boton btn-principal justify-self-right'>
                                                                 <span className='d-none d-md-inline'>
                                                                     Enviar
-                                                    </span>
+                                                                </span>
                                                                 {' '}
                                                                 <FontAwesomeIcon icon={faCheck} size='xl' />
                                                             </button>
@@ -357,7 +415,7 @@ const Inscripcion = () => {
                                                             <button onClick={next} className='boton btn-principal justify-self-right'>
                                                                 <span className='d-none d-md-inline'>
                                                                     Siguiente
-                                                    </span>
+                                                                </span>
                                                                 {' '}
                                                                 <FontAwesomeIcon icon={faAngleRight} size='xl' />
                                                             </button>

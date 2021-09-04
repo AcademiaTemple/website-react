@@ -1,11 +1,14 @@
 import React from 'react'
-import APRENDE_CPP_LOPEZ_1 from './enr_event_APRENDE-CPP-LOPEZ-1';
+import FormCPPLopez from './enr_events/APRENDE-CPP-LOPEZ-1';
+import FormIngles from './enr_events/APRENDE-INGLES-BENAVIDES-1';
 
 const Inscripcion = ({ match }) => {
 
     switch (match.params.id) {
-        //case 'APRENDE-CPP-LOPEZ-1':
-        //return <APRENDE_CPP_LOPEZ_1 />;
+        case 'APRENDE-CPP-LOPEZ-1':
+            return <FormCPPLopez />;
+        case 'APRENDE-INGLES-BENAVIDES-1':
+            return <FormIngles />;
         default:
             return <div>Código de inscripción inválido</div>;
     }
