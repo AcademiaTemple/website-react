@@ -58,7 +58,7 @@ const MainDescription = () => (
     <>
         Si te gusta la tecnología y programación para crear cosas de tu imaginación, <b>hoy tienes esa oportunidad.</b><br />
         Inscríbete y aprende una de las bases de datos más populares : <b>MongoDB</b>.<br />
-        <b>requisitos previos:  nociones básicas de programción como operadores booleanos,comandos de líneas y comandos shell y funciones variablesl</b> .<br /><br />
+        <b>requisitos previos:  nociones básicas de programción como operadores booleanos,comandos de líneas y comandos shell y funciones variables.</b><br /><br />
         <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte a los grupos de Telegram y Discord que es un requisito para obtener el certificado.</b> <br />
         <b>Además,para obtener el certificado certificado</b>, debes lograr aprobar <b> el examen que el profesor propondrá al final de la clases y si asistes a la clase completamente.</b><br /><br />
         El profesor solo contestará por Discord las dudas y en Telegran y Discrod agruparemos a los alumnos :). 
