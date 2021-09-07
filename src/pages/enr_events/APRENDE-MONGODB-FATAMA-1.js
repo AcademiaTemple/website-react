@@ -60,7 +60,8 @@ const MainDescription = () => (
         Inscríbete y aprende una de las bases de datos más populares : <b>MongoDB</b>.<br />
         <b>No hay requisitos previos</b> y solo necesitas las ganas de aprender :).<br /><br />
         <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte que es un requito para obtener el certificado.</b> <br />
-        <b>Además,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases y si asistes a la clase completamente</b>
+        <b>Además,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases y si asistes a la clase completamente.</b><br /><br />
+        El profesor solo contestará por Discord las dudas y en Telegran y Discrod agruparemos a los alumnos :). 
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
@@ -69,10 +70,10 @@ const MainDescription = () => (
 const numOfSessions = 1;
 
 // Fecha(s) del evento
-const dateTime = '12 de setiembre, de 4pm a 7pm (Hora Lima - Colombia)';
+const dateTime = '19 de setiembre, de 4pm a 7pm (Hora Lima - Colombia)';
 
 // Plataforma(s)
-const platform = 'Google Meets';
+const platform = 'Google Meets y/o Discord';
 
 ////// NO EDITAR - Lógica
 
