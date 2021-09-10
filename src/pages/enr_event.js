@@ -3,6 +3,7 @@ import FormCPPLopez from './enr_events/APRENDE-CPP-LOPEZ-1';
 import FormIngles from './enr_events/APRENDE-INGLES-BENAVIDES-1';
 import FormMongoDB from './enr_events/APRENDE-MONGODB-FATAMA-1';
 import FormProteccion from './enr_events/APRENDE-PROTECCIONDEDATOS-PROFELEAL-1';
+import Formpython from './enr_events/APRENDE-PYTHON-RODRIGO-1';
 const Inscripcion = ({ match }) => {
 
     switch (match.params.id) {
@@ -14,6 +15,8 @@ const Inscripcion = ({ match }) => {
             return <FormMongoDB/>;
         case 'APRENDE-PROTECCIONDEDATOS-PROFELEAL-1':
             return <FormProteccion/>;
+        case 'APRENDE-PYTHON-RODRIGO-1':
+            return <Formpython/>;
 
         default:
             return <div>Código de inscripción inválido</div>;

@@ -22,49 +22,42 @@ import { Link, useHistory } from 'react-router-dom';
 // EDITAR
 
 // Título principal del curso
-const mainTitle = 'Aprende Mongo DB desde cero';
+const mainTitle = 'Introducción a Python';
 
 // Nombre del profesor
-const hostName = 'Jorge Fatama';
+const hostName = 'Rodrigo Flores';
 
 // Imagen de fondo
 const backgroundImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/formularios%2Fpastel-de-fua.jpg?alt=media&token=d0c9b41f-06ab-42d3-ba1d-f9c05c1b9ea3';
 
 // Id del profesor
-const teacherId = 'ZGgdEwJNZjgbZ59IcEGs';
+const teacherId = 'dXu1MzttIxa0tsTaEQV2';
 
 // Img del profesor
-const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f';
+const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FdXu1MzttIxa0tsTaEQV2?alt=media&token=91f04c7d-fc1b-4581-a843-2f4b4b6597b3';
 
 // Descripción corta del profesor
-const teacherDescription = 'Estudié Ingeniería de Sistemas Empresariales y actualmente trabajo en proyectos bancarios. Empecé enseñando matemáticas a compañeros de la universidad y ahí descubrí mi pasión por la enseñanza. Recién en los primeros ciclos de la universidad aprendí a programar y aunque no fue fácil al inicio, me gustó bastante. Actualmente estoy estudiando para dar el examen TOELF (prueba estandarizada de dominio del idioma inglés).';
+const teacherDescription = 'Bienvenidos a todos, Mi nombre es Rodrigo. Soy bachiller en Ciencias con mención en Ingeniería Informática por la PUCP y con ganas de aprender y enseñar :). ';
 
 // Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
 const joinGroups = [
     {
-        type: 'WSP',
-        link: 'https://chat.whatsapp.com/HML2Rfk2A6y5aSdrQr5LzW',
-        icon: faWhatsapp
-    },
-    {
         type: 'TELEGRAM',
-        link: 'link-de-telegram',
+        link: 'https://t.me/joinchat/du_cBO1kg4s5ZTVh',
         icon: faTelegram
     },
-    {
-        type: 'DISCORD',
-        link: 'link de discord',
-        icon: faDiscord
-    }
+ 
 ];
 
 // Descripción del curso
 const MainDescription = () => (
     <>
-        Esto es un texto de <b>prueba</b>. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
-        Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
-        Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
-        <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte.</b>
+        Si te gusta la tecnología y programación para crear cosas de tu imaginación, <b>hoy tienes esa oportunidad.</b><br /><br />
+        Inscríbete y aprende <b>Pyhthon</b>.Los esperamos :) <br /><br /> 
+        <b>requisitos previos:  no hay requisitos y solo debes tener ganas de aprender. </b><br /><br />
+        <b>Daremos certificado si asistena a la clase completa de manera puntual y estén en el grupo de Telegram </b>. <br /><br />
+        Las dudas serán resueltas por el profesor en <b>Discord</b>  que se les dará en el Telegram.
+
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
@@ -73,10 +66,10 @@ const MainDescription = () => (
 const numOfSessions = 1;
 
 // Fecha(s) del evento
-const dateTime = '19 de junio, de 3pm a 6pm (Hora Lima - Colombia)';
+const dateTime = '30 de setiembre, de 7pm a 9pm (Hora Lima - Colombia)';
 
 // Plataforma(s)
-const platform = 'Google Meets';
+const platform = 'Google Meets y/o Discord';
 
 ////// NO EDITAR - Lógica
 
