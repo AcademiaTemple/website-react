@@ -55,7 +55,7 @@ const MainDescription = () => (
         Si te gusta la tecnología y programación para crear cosas de tu imaginación, <b>hoy tienes esa oportunidad.</b><br /><br />
         Inscríbete y aprende <b>Pyhthon</b>.Los esperamos :) <br /><br /> 
         <b>requisitos previos:  no hay requisitos y solo debes tener ganas de aprender. </b><br /><br />
-        <b>Daremos certificado si asistena a la clase completa de manera puntual y estén en el grupo de Telegram </b>. <br /><br />
+        <b>Daremos certificado si asisten a la clase completa de manera puntual y estén en el grupo de Telegram </b>. <br /><br />
         Las dudas serán resueltas por el profesor en <b>Discord</b>  que se les dará en el Telegram.
 
     </>
