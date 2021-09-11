@@ -25,55 +25,52 @@ import { Link, useHistory } from 'react-router-dom';
 const mainTitle = 'Aprende inglés';
 
 // Nombre del profesor
-const hostName = 'Pedro Castillo';
+const hostName = 'Alexander Benavides Cabrera';
 
 // Imagen de fondo
 const backgroundImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/formularios%2Fpastel-de-fua.jpg?alt=media&token=d0c9b41f-06ab-42d3-ba1d-f9c05c1b9ea3';
 
 // Id del profesor
-const teacherId = 'ZGgdEwJNZjgbZ59IcEGs';
+const teacherId = 'th8rfRO62cYIxEFWpSeS';
 
 // Img del profesor
-const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FZGgdEwJNZjgbZ59IcEGs?alt=media&token=36eac6d3-99c9-4045-8799-86ed8a05524f';
+const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2Fth8rfRO62cYIxEFWpSeS?alt=media&token=e6d92d6f-7041-4472-8223-3c61b890fc86';
 
 // Descripción corta del profesor
-const teacherDescription = 'Bienvenidos a todos, mi nombre es Rodrigo López y soy integrante de la comunidad PUCP. Mi pasión es enseñar y hacer de este mundo un lugar mejor.';
+const teacherDescription = 'Bienvenidos a todos, mi nombre es Alexander Cabrera y soy Estudié Ingeniería de Sistemas Empresariales y actualmente trabajo en proyectos bancarios.Además, tengo experiencia en TOELF de inglés.';
 
 // Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
 const joinGroups = [
-    {
-        type: 'WSP',
-        link: 'https://chat.whatsapp.com/HML2Rfk2A6y5aSdrQr5LzW',
-        icon: faWhatsapp
-    },
+    
+    
+    
+    
     {
         type: 'TELEGRAM',
-        link: 'link-de-telegram',
+        link: 'https://t.me/joinchat/du_cBO1kg4s5ZTVh',
         icon: faTelegram
     },
-    {
-        type: 'DISCORD',
-        link: 'link de discord',
-        icon: faDiscord
-    }
+
+
 ];
 
 // Descripción del curso
 const MainDescription = () => (
     <>
-        Esto es un texto de <b>prueba</b>. Si te gusta la programación, <b>hoy tienes esa oportunidad.</b><br />
-        Inscríbete y aprende a un lenguaje <b> que el común de las personas no sabe: C++</b>.<br />
-        Haz la diferencia y agrega un conocimiento adicional a tu repertorio.<br /><br />
-        <b>Al final de tu inscripción, tendrás acceso a los grupos del curso. No olvides unirte.</b>
+        Si te gusta la tecnología, programación, cualquier tema o para tu ámbito profesional, <b>hoy tienes esa oportunidad de empezar a aprender inglés desde cero.</b><br /><br />
+        Inscríbete y aprende <b>inglés hasta donde lleguemos</b>.Los esperamos :) <br /><br /> 
+        <b>requisitos previos:  no hay requisitos y solo debes tener ganas de aprender. </b><br /><br />
+        <b>Daremos certificado si asisten a la clase completa de manera puntual y estén en el grupo de Telegram </b>. <br /><br />
+        Las dudas serán resueltas por el profesor en <b>Discord</b>  que se les dará en el Telegram.
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
 
 // Número de sesiones
-const numOfSessions = 1;
+const numOfSessions = 'hasta donde lleguemos';
 
 // Fecha(s) del evento
-const dateTime = '19 de junio, de 3pm a 6pm (Hora Lima - Colombia)';
+const dateTime = '26 de junio, de 4pm a 6pm (Hora Lima - Colombia)';
 
 // Plataforma(s)
 const platform = 'Google Meets';
