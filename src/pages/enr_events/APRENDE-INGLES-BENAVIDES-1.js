@@ -37,7 +37,7 @@ const teacherId = 'th8rfRO62cYIxEFWpSeS';
 const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2Fth8rfRO62cYIxEFWpSeS?alt=media&token=e6d92d6f-7041-4472-8223-3c61b890fc86';
 
 // Descripción corta del profesor
-const teacherDescription = 'Bienvenidos a todos, mi nombre es Alexander Cabrera y tengo experiencia en TOELF exam de inglés.';
+const teacherDescription = 'Bienvenidos a todos, mi nombre es Alexander Benavides Cabrera y tengo experiencia en TOELF exam de inglés.';
 
 // Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
 const joinGroups = [
