@@ -37,7 +37,7 @@ const teacherId = 'th8rfRO62cYIxEFWpSeS';
 const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2Fth8rfRO62cYIxEFWpSeS?alt=media&token=e6d92d6f-7041-4472-8223-3c61b890fc86';
 
 // Descripción corta del profesor
-const teacherDescription = 'Bienvenidos a todos, mi nombre es Alexander Cabrera y soy Estudié Ingeniería de Sistemas Empresariales y actualmente trabajo en proyectos bancarios.Además, tengo experiencia en TOELF de inglés.';
+const teacherDescription = 'Bienvenidos a todos, mi nombre es Alexander Cabrera y tengo experiencia en TOELF exam de inglés.';
 
 // Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
 const joinGroups = [
@@ -46,9 +46,9 @@ const joinGroups = [
     
     
     {
-        type: 'TELEGRAM',
-        link: 'https://t.me/joinchat/du_cBO1kg4s5ZTVh',
-        icon: faTelegram
+        type: 'WSP',
+        link: 'https://chat.whatsapp.com/B7UxIj8g9vJHPH7EmsB1Ta',
+        icon: faWhatsapp
     },
 
 
@@ -57,20 +57,20 @@ const joinGroups = [
 // Descripción del curso
 const MainDescription = () => (
     <>
-        Si te gusta la tecnología, programación, cualquier tema o para tu ámbito profesional, <b>hoy tienes esa oportunidad de empezar a aprender inglés desde cero.</b><br /><br />
-        Inscríbete y aprende <b>inglés hasta donde lleguemos</b>.Los esperamos :) <br /><br /> 
-        <b>requisitos previos:  no hay requisitos y solo debes tener ganas de aprender. </b><br /><br />
-        <b>Daremos certificado si asisten a la clase completa de manera puntual y estén en el grupo de Telegram </b>. <br /><br />
-        Las dudas serán resueltas por el profesor en <b>Discord</b>  que se les dará en el Telegram.
+        Si te gusta la tecnología, programación o quieres seguir mejorando en tu ámbito profesional, <b>hoy tienes esa oportunidad.</b><br /><br />
+        Inscríbete y aprende el idioma más importante: <b>inglés </b>.Los esperamos :) <br /><br /> 
+        requisitos previos:  no hay requisitos y solo debes tener ganas de aprender.<br /><br />
+        <b>ES GRATIS Y ESPERAMOS TU COMPROMISO POR ASISTIR A CLASES SINO SERÁS RETIRADO.</b>
+
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
 
 // Número de sesiones
-const numOfSessions = 'hasta donde lleguemos';
+const numOfSessions = '1 ciclo';
 
 // Fecha(s) del evento
-const dateTime = '26 de junio, de 4pm a 6pm (Hora Lima - Colombia)';
+const dateTime = 'Inicio sábado 2 de octubre, Sáb-domingo (7pm a 8pm Hora Lima - Colombia) y miércoles (8p.m-9p.m Hora Lima - Colombia)';
 
 // Plataforma(s)
 const platform = 'Google Meets';
