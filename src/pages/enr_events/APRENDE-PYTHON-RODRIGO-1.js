@@ -25,7 +25,7 @@ import { Link, useHistory } from 'react-router-dom';
 const mainTitle = 'Introducción a Python';
 
 // Nombre del profesor
-const hostName = 'Rodrigo Flores';
+const hostName = 'Rodrigo Suárez';
 
 // Imagen de fondo
 const backgroundImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/formularios%2Fpastel-de-fua.jpg?alt=media&token=d0c9b41f-06ab-42d3-ba1d-f9c05c1b9ea3';
@@ -37,7 +37,7 @@ const teacherId = 'dXu1MzttIxa0tsTaEQV2';
 const teacherImg = 'https://firebasestorage.googleapis.com/v0/b/academia-temple.appspot.com/o/profesores%2FdXu1MzttIxa0tsTaEQV2?alt=media&token=91f04c7d-fc1b-4581-a843-2f4b4b6597b3';
 
 // Descripción corta del profesor
-const teacherDescription = 'Bienvenidos a todos, Mi nombre es Rodrigo. Soy bachiller en Ciencias con mención en Ingeniería Informática por la PUCP y con ganas de aprender y enseñar :). ';
+const teacherDescription = 'Bienvenidos a todos, Mi nombre es Rodrigo Suárez. Soy bachiller en Ciencias con mención en Ingeniería Informática por la PUCP con ganas de aprender constantemente y enseñar :). ';
 
 // Grupos a los que se unirán: WSP, TELEGRAM, DISCORD
 const joinGroups = [
