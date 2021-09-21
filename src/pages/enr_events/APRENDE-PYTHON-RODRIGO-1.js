@@ -46,11 +46,6 @@ const joinGroups = [
         link: 'https://chat.whatsapp.com/HORNWY3qmcdCkOldAmhkYI',
         icon: faWhatsapp
     },
-    {
-        type: 'TELEGRAM',
-        link: 'https://t.me/joinchat/du_cBO1kg4s5ZTVh',
-        icon: faTelegram
-    },
     
 ];
 
@@ -60,7 +55,7 @@ const MainDescription = () => (
         Si te gusta la tecnología y programación para crear cosas de tu imaginación, <b>hoy tienes esa oportunidad.</b><br /><br />
         Inscríbete y aprende <b>Python</b>.Los esperamos :). <br /><br /> 
         <b>Requisitos previos:  no hay requisitos y solo debes tener ganas de aprender. </b><br /><br />
-        <b>Daremos certificado si asisten a la clase completa de manera puntual y estén en el grupo de Telegram general y del grupo de Whatsapp de solo python</b>.
+        <b>Daremos certificado si asisten a la clase completa de manera puntual y entran al grupo de Whatsapp de solo python</b>.
     </>
 );
 //<b>Al final de esta clase,</b> te brindaremos un <b>certificado</b> si logras aprobar <b> el examen que el profesor propondrá al final de la clases</b>
