@@ -18,7 +18,7 @@
     "firebase": "^8.2.4",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
-    "plyr": "^3.6.3",
+    "plyr": "3.0.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
@@ -61,5 +61,11 @@
   },
   "sideEffects": [
     "*.css"
-  ]
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
+    "mini-css-extract-plugin": "^2.6.1"
+  }
 }

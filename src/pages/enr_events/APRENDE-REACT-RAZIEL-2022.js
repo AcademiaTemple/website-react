@@ -16,7 +16,7 @@ import { css } from "@emotion/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleLeft, faAngleRight, faCheck, faCheckCircle, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { contactTypes, fromTypes, knowLevelTypes } from '../../data/data';
-import { faDiscord, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 
 // EDITAR
@@ -64,7 +64,7 @@ const MainDescription = () => (
 const numOfSessions = 10;
 
 // Fecha(s) del evento
-const dateTime = 'Lunes, Miércoles y Viernes de 12m a 2pm (Horario CST). Inicio: 5 de setiembre del 2022';
+const dateTime = 'Lunes, Miércoles y Viernes de 1pm a 3pm (Horario CST). Inicio: 5 de setiembre del 2022';
 
 // Plataforma(s)
 const platform = 'Google Meets';
